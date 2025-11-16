@@ -3,11 +3,12 @@
 ## Contents
 
 - HowToThesis: This is where the guide on how to write a thesis lives
+- ThesisRoadmap: This shows the steps, milestones, and organizational elements
+- ThesisTemplate: This is a basic thesis template with minimal structure
 - Shared Assets: This is where the cls file for latex and meta information is stored
 
 
-
-## How to Contribute via Pull Request (PR)
+## How to Contribute to Guidelines and Templates via Pull Request (PR)
 
 To propose fixes, improvements, or new content for the `.tex` files in this repository:
 
