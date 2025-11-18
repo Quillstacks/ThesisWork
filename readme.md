@@ -8,6 +8,30 @@
 - Shared Assets: This is where the cls file for latex and meta information is stored
 
 
+<br>
+<br>
+
+<p align="center">
+	<a href="https://pages.schutera.com/HowToThesis/notes.pdf">
+		<img src="https://img.shields.io/badge/Open-How To Thesis%20Guide-blue?logo=adobeacrobatreader" alt="View Thesis Guide">
+	</a>
+</p> 
+
+<p align="center">
+	<a href="https://pages.schutera.com/ThesisTemplate/notes.pdf">
+		<img src="https://img.shields.io/badge/Open-Thesis%20Template-blue?logo=adobeacrobatreader" alt="View Thesis Template">
+	</a>
+</p> 
+
+<p align="center">
+	<a href="https://pages.schutera.com/HowToThesis/notes.pdf">
+		<img src="https://img.shields.io/badge/Open-Thesis%20Roadmap-blue?logo=adobeacrobatreader" alt="View Thesis Roadmap">
+	</a>
+</p> 
+
+<br>
+<br>
+
 ## How to Contribute to Guidelines and Templates via Pull Request (PR)
 
 To propose fixes, improvements, or new content for the `.tex` files in this repository:
