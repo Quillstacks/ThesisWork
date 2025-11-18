@@ -1,15 +1,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% How to Write a Scientific Thesis
+% Expendable Thesis Template
+%
 % Author: Dr.-Ing. Mark Schutera
 % Based on Tufte-style layout
+% 
+% This is the document to select when running your LaTeX build process
+% When in doubt, run: pdflatex -> bibtex -> pdflatex -> pdflatex
+% When still in doupt delete auxiliary files and try again
 \makeindex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass{../sharedAssets/tufte}
+\documentclass{tufte}
 
 %%
 % Book metadata
-\title{A Thesis Template}
+\title{Expendable Thesis Template}
 \author[\defaultauthor]{\defaultauthor}
 \publisher[\defaultpublisher]{\defaultpublisher}
 
@@ -27,27 +32,66 @@
 \usepackage{float}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
+\usepackage{lipsum}
+\setcitestyle{numbers,square}
+
+
 
 \begin{document}
-
-
-
 \makestandardfrontmatter
 % Dedication
 % Alternative quotes:
 \makededication{\openepigraph{“We're just clones, sir. We're meant to be expendable”}{Clone Trooper of the 104th Battalion}}
-\tableofcontents
+
 
 
 % Introduction
-\makeintroduction{%
-  this is to be done
+\makeintroduction{
+  We have all been there - facing that empty stack of papers or pixels for that matter, ultimately facing the daunting task of writing a scientific thesis.
+  \newthought{This template} tries to bypass some of that empty paper anxiety by providing some intertia to get you going. 
+  Feel free to clone and adapt it to your needs. If you come across parts which you adapt, and think should be adapted in the template in general, 
+
+  \newthought{Please Contribute back - } This project is open for contributions, 
+  via \href{https://github.com/Quillstacks/ThesisWork/tree/952300e7be221eb82c4f1b615db7cd3ace1ce774/ThesisTemplate}{GitHub} to report issues and suggest improvements and changes, submit a pull requests.
+
+
+  \newthought{While this template} provides implicit guidance on structure, format and style, it is not a substitute 
+  for reading the companion guide.
+  
+  \marginnote{\newthought{To get} to the guide click 
+  \href{https://pages.schutera.com/HowToThesis/notes.pdf}{here}
+  }
+
+  \newthought{This document is a living work and should not be considered complete}—there are approaches I have tested and refined, 
+  others I am still exploring, some I will adapt based on new insights, and perspectives I thought I understood but continue to evolve.
+  That being said, in a near future this space will be ..
+
+  \vfill
+  \newthought{Your Abstract.} The abstract provides a concise summary of your thesis, including the research question, 
+  chosen approach, key findings, and their interpretation. 
+  It should be no longer than half a page. While optional, feel free to write the abstract in English 
+  and the native language of your institution.
+  The abstract is best written after the main sections are complete, 
+  ensuring it accurately reflects the content and contributions of your work. This is probably the only part of your thesis that will be read by everyone,
+  so make it count - and make the reader understand why to read on.
   }
 
 
-\vfill
-\par\smallcaps{Contribute - } This project is open for contributions, 
-via GitHub \url{https://github.com/Quillstacks/ThesisWork} to report issues and suggest improvements, submit a pull requests.
+
+
+  \makeacknowledgment{%
+  \newthought{You will want to thank} your supervisor(s), your industry partners and institute, colleagues, friends, family and anyone else who supported 
+  you during your journey. If you want to get personal and lyric, this is the place in your thesis to do so. 
+  \newthought{For my part,} I want to express my sincere gratitude to all those who have and will have contributed to the development and refinement of this thesis template.
+  \newthought{And I want to thank my wife,} for putting up with me stealing weekends and evenings in exchange for this template. 
+  }%
+
+  \makeaffirmation
+
+  
+  \cleardoublepage
+  \tableofcontents
+
 
 
 
@@ -57,170 +101,43 @@ via GitHub \url{https://github.com/Quillstacks/ThesisWork} to report issues and 
 
 % ----------------------------------------------------------------------
 
-\chapter{Introduction}\index{Thesis writing}
+\chapter{Introduction} \index{Introduction}
+\label{ch:Introduction}
+\input{./Chapters/introduction}
 
-\chapter{Methods}
 
-\chapter{Results}
+\chapter{Methods} \index{Methods}
+\label{ch:Methods}
+\input{./Chapters/methods}
 
-\chapter{Discussion}
-\chapter{Conclusion}
+\chapter{Results} \index{Results}
+\label{ch:Results}
+\input{./Chapters/results}
 
-% ----------------------------------------------------------------------
+\chapter{Discussion} \index{Discussion}
+\label{ch:Discussion}
+\input{./Chapters/discussion}
 
-\chapter{Structure and Scope}\index{Structure}
+% ==========================================================================================================
 
-\marginnote{%
-  \newthought{Common Thesis Structure:} \\
-  1. Title Page \\
-  2. Abstract \\
-  3. Affirmation \\
-  4. Acknowledgements \\
-  5. Table of Contents \\
-  6. List of Figures and Tables \\
-  7. List of Equations \\
-  8. List of Abbreviations \\
-  9. List of Symbols \\
-  10. IMRD Body \\
-  11. Index \\
-  12. References \\
-  13. Appendices \\
-}
+\makestandardbackmatter{references} 
 
-\newthought{The structure is for the reader.} You read that right, the structure is not primarily for you. 
-Of course a good structure helps you to organize and document your thoughts and work as you go - but it would be no good advice to limit yourself to that.
-Ultimately then, a well-organized thesis guides the reader through your research journey, 
-helping them understand your objectives, methods, findings, contributions and conclusions.\\
+\chapter{Appendices}
 
-\newthought{While some flexibility} is allowed and even encouraged to adapt the structure to your specific research topic and methodology,
-the following sections outline a commonly accepted structure for scientific theses. The IMRD (Introduction, Methods, Results, Discussion) is a good starting point.
+\newthought{Appendix 1}
+\label{app:1}
+and a short description of appendix 1. This description is between 2-3 sentences long. The main text must reference the appendix where appropriate.
+\newthought{Appendix 2}
+\label{app:2}
+contains tables, data, questionnaires, proofs, derivations, and other ancillary information that might 
+otherwise negatively affect the flow of the main text.
 
-\section{Abstract}\index{Abstract}
-\newthought{The abstract} provides a concise summary of your thesis, including the research question, 
-chosen approach, key findings, and their interpretation. 
-It should be no longer than half a page. While optional, feel free to write the abstract in English 
-and the native language of your institution.
-The abstract is best written after the main sections are complete, 
-ensuring it accurately reflects the content and contributions of your work.
 
-\section{Introduction}\index{Introduction}
-\newthought{The introduction} is $20 - 30\%$ of the total thesis length and is structured into: 
-\begin{itemize}
-  \item Context and Motivation
-  \item Related Work and Background through Literature Review
-  \item Research Gap and Problem Statement
-  \item Objectives and their Significance
-  \item Thesis Structure Overview
-\end{itemize}
+\vfill
+\newthought{The appendix} 
+is not a dumping ground for material that does not fit into the main text due to page limitations.
+Appendices are optional, include an appendix only when necessary. Often enough you do not need it.
+\cleardoublepage
 
-\marginnote{\newthought{Lengthy motivation sections}\\
-  covering how autonomous driving brings down traffic accidents by 90\%, or reiteration of broad concepts, 
-  or (humble bragging around) how awesome your industrial partner is, or similar topics, are to be avoided - A short single sentence will do.
-  Then focus on motivating your specific field and research problem.
-}
-
-Begin with a broad yet short overview to provide context and motivation in the current field.
-
-\newthought{Related Work -} or State of the Art, summarizes and connects relevant literature to highlight and organize existing knowledge and identify \textbf{gaps}. 
-Sometimes this is extended to a section on preliminary, or foundational concepts - however when you go that path, don't put too much into it. 
-Make use of Google Scholar as a tool to do so.
-\marginnote{%
-  \newthought{Gaps can be diverse} \\
-    Inconsistencies or contradictions in existing studies. \\
-    Methodological limitations in previous research\\
-    Missing transfer of methods between fields of application. 
-}
-Select your sources carefully and evaluate whether they are worthy of citation - in general they should be peer-reviewed. 
-Exceptions are seminal works, grey literature, or highly cited non-peer-reviewed sources. Make sure to evaluate the quality of a working paper, 
-for example, by looking at other scientific contributions of the authors or the affiliated institution. 
-
-\newthought{Citations} are essential in academic writing to give credit to original sources and avoid plagiarism. You have to include a reference to the original source in the text for every argument, source code, information, or line of thought that originates from another author.
-Failing to do so will result in your work being classified as plagiarism and considered an attempt to deceive. 
-
-\newthought{Narrow down} to the specific problem statement (in 2-4 bullet points)  or research question your thesis aims to address.
-Then clearly (in 2-4 bullet points) mirror the problem statement and articulate the contributions you will be making and the significance of your work, 
-and how the field will benefit from your work.\\
-
-\marginnote{%
-\newthought{Schöpfungshöhe}, a certain level of originality and creativity required in academic work, is closely linked to the nature of your contributions. 
-You will soon find yourself trading off between high-risk-high-impact ideas and more conservative incremental objectives. 
-I advise to aim for a mix when defining your contributions: A workhorse (driven by execution and rigor), a staircase (small incremental improvement on a known method), 
-a moonshot (high-impact idea or novel recombination, which might fail).
-}
-
-Conclude the introduction with a brief (really brief) outline of the thesis structure, guiding the reader on what to expect in the subsequent chapters.
-
-\section{Methods}\index{Methods}
-
-\newthought{The methods section} is $40 - 50\%$ of the total thesis length and is structured into 2-3 sections.
-Describe the methodology used to address the research questions. 
-Include all relevant mathematical formulations, algorithms, concepts and thoroughly explain the processes of data collection, generation, and analysis. 
-Ensure that the description is sufficiently detailed to allow readers to reproduce your approach and achieve comparable results.
-
-\begin{itemize}
-  \item Research Design and Approach (usually new or adapted models/algorithms)
-  \item Data Collection and Preparation or Description
-  \item Experimental Setup and Implementation
-  \item Evaluation Metrics and Analysis Methods
-  \item Reproducibility and Validation
-\end{itemize}
-
-\newthought{Start with an overview} figure that depicts your overall architecture, flow and research design.  
-Then proceed to describe the individual components in dedicated sections. The transition between sections need to be motivated and logical.
-
-\newthought{Do not loose touch} with the problem statement and objectives defined in the introduction, make sure to clearly link back to them where appropriate.
-
-\newthought{This chapter} contains the theoretical foundations, models, algorithms, experimental setups, data recorded, metrics, evaluation strategies, or analytical techniques employed in your research.
-
-\marginnote{%
-  \newthought{Don't cite!}, reference. 
-  The methods section outlines your work, not the work of others. Existing knowledge needs to be described and introduced in the Introduction. 
-  If you feel the need to refresh the reader on established methods, do so by referencing back.
-}
-
-\section{Results}\index{Results}
-\newthought{The results section} is $25 - 35\%$ of the total thesis length and presents the findings of your research.
-Results should be presented as objectively as possible, without mixing interpretation or discussion. 
-Focus on reporting the findings clearly and concisely, using neutral language and avoiding subjective statements. 
-
-\newthought{Always have several (at least two) benchmarks} to compare your results against. Great benchmarks are human performance, state-of-the-art methods,
-established baselines, theoretical limits, or heuristics.
-
-\marginnote{%
-  \newthought{Visual aids} such as tables, graphs, and charts are invaluable.
-}
-
-\newthought{Structure your results} by grouping related findings and presenting them in a logical order (some might call this story telling) 
-that reflects your research objectives. 
-Each result should be linked to the corresponding problem statement - again.
-
-\begin{itemize}
-  \item Present quantitative results with appropriate statistical measures (e.g., means, standard deviations, confidence intervals).
-  \item Use tables to organize numerical data and figures to illustrate trends, patterns, or relationships.
-  \item Avoid interpreting or explaining the implications of the results in this section; reserve such commentary for the discussion part.
-\end{itemize}
-
-\section{Discussion}\index{Discussion}
-
-\newthought{The discussion section} is $15 - 20\%$ of the total thesis length and interprets and contextualizes your results, linking them back to your research questions and objectives.
-A good practice is to make the linkage to your objectives explicit, by again using a bullet point list mirroring the objectives from the introduction.
-
-\marginnote{%
-  \newthought{Conclusion}, think: Take-home message.\\
-}
-
-\newthought{Feel free to split} the Discussion into a Discussion and Conclusion part. 
-
-\newthought{The discussion} interprets and contextualizes your results and their limitations.
-\newthought{While the conclusion} clearly distills the the main contributions of your work, reflects on implications, and points to future work.
-
-\section{Appendices}\index{Appendix}
-\newthought{The appendix} contains tables, data, questionnaires, proofs, derivations, and other ancillary information that might 
-otherwise negatively affect the flow of the main text. 
-The main text must reference the appendix where appropriate. 
-Do not use the appendix for outsourcing text that does not fit into the main text due to page restrictions. 
-Include an appendix only when necessary.
-
-\makestandardbackmatter{howtothesis_references}
 
 \end{document}

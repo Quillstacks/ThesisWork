@@ -1,0 +1,88 @@
+\newthought{The results section} introduces experimental setups, experimental design, datasets used, hardware, implementation details, 
+and presents the findings of your experiments and analyses around your novel methods - in a quantitative manner. Results should be presented as objectively as possible, without blending in interpretations or discussions at this point. 
+Focus on reporting the findings clearly and concisely, using neutral language and avoiding subjective statements.
+
+\begin{table}[!ht]
+  \centering
+  \caption{Example of a well-formatted table with a clear, concise caption. Make sure to go \textit{full width} for tables and figures, and embrace \textit{horizontal lines}, while avoiding vertical lines.}
+  \label{tab:example}
+  \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcc}
+    \toprule
+    \textbf{Category} & \textbf{Value 1} & \textbf{Value 2} \\
+    \midrule
+    Example A & \textit{42} & 3.14 \\
+    Example B & 17 & 2.71 \\
+    \bottomrule
+  \end{tabular*}
+\end{table}
+
+ 
+
+\newthought{Always have several (at least two) benchmarks or baselines} to compare your results against. Great baselines are human performance, 
+state-of-the-art methods, other established baselines, theoretical limits, or heuristics and simple models for starters. 
+Present quantitative results with appropriate statistical measures (e.g., means, standard deviations, confidence intervals).
+Deciding what and how to measure is crucial. Aligning your metrics and evaluation criteria with your research objectives is a field of study in its own right.
+Whenever possible, use established benchmarks and metrics from the literature (you will have introduced them in your Introduction, in Section~\ref{sec:RelatedWork}) to ensure comparability. 
+New developments and designs in this are shows in the Methods Chapter (see Ch.~\ref{ch:Methods}).
+
+\newthought{Use tables to organize} numerical data (see Tab.~\ref{tab:example}) and figures (see Fig.~\ref{fig:linegraph}) to illustrate trends, patterns, or relationships.
+
+% You want to contribute? This is the place you are looking for. 
+% I am still trying to find a good library to draw nice figures and plots in LaTeX, or at least include them nicely.
+% Bonus points using Tufte Style (maybe that package or library still needs to be written, maybe we should do that).
+% Getting this step standardized across theses would be great. Reach out if you think this is something you want to work on.
+
+\begin{figure}[!ht]
+  \includegraphics[width=\linewidth]{figures/tufte-line.png}
+  \caption{Basic line graph after Tufte. Data emphasized, axes info in title, minimal ticks, reduced non-data ink.}
+  \label{fig:linegraph}
+\end{figure}
+
+
+\section{Experimental Design}
+\newthought{If you have non-trivial} experimental setups or designs, describe them here. 
+This includes the design of experiments used to evaluate your methods.
+
+\section{Implementation Details}
+\newthought{This also holds} for details about datasets, hardware, software frameworks, and implementation specifics.
+Again, focus on the things that are necessary to understand and reproduce your results - not every package you installed is relevant.
+A lot will be documented in your code repository and code documentation anyway, so focus on the important bits here. 
+And remember to use margin notes for ancillary information - this is especially powerful in this chapter.
+
+\newthought{A good practice} is to have a code demo ready to showcase your results interactively. This could be a Jupyter notebook, 
+a web application, or any other way of hosting software in this century that allows users to engage with your findings and contributions.
+Make sure that this demo is properly documented and accessible, ideally set up for easy deployment (better application).
+\marginnote{
+  \newthought{When working on proprietary} or sensitive data, make use of a toy dataset or environment.
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{First Finding}
+\newthought{Structure your results} by grouping related findings and presenting them in a logical order (some might call this story telling) 
+that reflects your research objectives. 
+\marginnote{
+  \newthought{Visual aids} such as images, technical drawings, tables, graphs, and charts are invaluable. 
+  Yet, make sure the text itself can transfer the results self-sustained.
+}
+Each result should be linkable to one or multiple corresponding problem statements.
+
+
+
+
+
+
+\section{Second Finding}
+\newthought{Every method} presented in the Methods chapter should have corresponding results here.
+Often your methods are evaluated along multiple dimensions, such as performance metrics, qualitative observations, and comparative analyses. 

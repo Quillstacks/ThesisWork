@@ -1,0 +1,125 @@
+\newthought{Every Chapter}, starts with a block of text, which introduces the chapter and its role in the overall thesis structure. 
+At the same time this block of text opens up potential sections within the chapter. As for the introduction this first block takes care 
+of the context and motivation, of your thesis. The introduction is $20 - 30\%$ of the total thesis length. 
+
+\marginnote{\newthought{Lengthy motivation sections}\\
+  covering how autonomous driving brings down traffic accidents by 90\%, reiteration of other broad concepts, 
+  or humble bragging in favor of your industrial partner, or similar topics, are to be avoided - A short single sentence will do.
+  Then focus on motivating your specific field and research problem, this is in its own right a broad field.
+}
+
+\section{Problem Statement}\label{sec:ProblemStatement}
+\newthought{Why is this specific field of research important, now?} Then, quickly narrow down to the specific field you will be addressing.
+Broadly outline the current state of the art in this field, meaning all relevant fields for that matter, and how they relate to reach other. Be diligent in preparing the ground for pointing out
+gaps you identified in existing knowledge or limitations in current approaches and the overarching problems that arise from the field. 
+These gaps are often a combination of several factors, such as limitations of current approaches, gaps in theoretical knowledge, constraints in applications, 
+or emerging developments that necessitate further investigation. 
+
+\newthought{Citations} are essential in academic writing to give credit to original sources. 
+To cite in text like this~\citep{SchuteraBachelorThesis}, 
+use the \texttt{\textbackslash citep\{\}} command.
+For selected references\cite{SchuteraBachelorThesis}, which you feel the reader would benefit from 
+immediate access to the detailed bibliographic information in the margin, 
+use the \texttt{\textbackslash cite\{\}} command.
+
+This section will be brimming with citations, as you have to include a reference to the original source in the text for every argument, source code, information, or line of thought that originates from another author.
+Failing to do so will result in your work being classified as plagiarism and considered an attempt to deceive. While of course you will be building upon
+recent work, always opt to cite seminal works, even if they are older.
+
+
+
+
+
+
+\section{Objectives}\label{sec:Objectives}
+\marginnote{%
+\newthought{Schöpfungshöhe}, a certain level of originality and creativity required in academic work, is closely linked to the nature of your contributions. 
+You will soon find yourself trading off between high-risk-high-impact ideas and more conservative incremental objectives. 
+I advise to aim for a mix when defining your contributions: A workhorse (driven by execution and rigor), a staircase (small incremental improvement on a known method), 
+a moonshot (high-impact idea or novel recombination, which might fail).
+} 
+
+\newthought{Open this} with a 3-5 sentences which distill the derived problem statement. 
+Then clearly (in 3-5 bullet points) outline the problem statement and articulate the contributions you will be making. 
+When reading the bullet points, with your \textit{Problem Statement} (see Sec.~\ref{sec:ProblemStatement}) as a prerequisite, it should be very clear to the reader
+how your contributions will impact the field, and its practitioners.
+You will want to be as specific as possible here, avoid vague statements and generalities. 
+
+\newthought{The contributions} of a work can be:
+
+\marginnote{
+\newthought{Specific contributions}, could sound like: A new method for X, More sensitive metrics for Y, an empirical study on Z, a curated dataset for X, 
+a data-driven analysis of Y, or an application of Z for a new domain. After reading the 
+bullet points, the reader should be able to clearly understand what you are trying to achieve and what he will be walking away with.
+}
+
+\begin{itemize}
+  \item Novel algorithms and methodologies, or an incremental improvement of such.
+  \item Empirical and experimental findings and in-depth analysis of existing methods or data.
+  \item Extended or curated datasets or benchmarks including metrics.
+  \item New theoretical insights and frameworks.
+  \item Interdisciplinary approaches, or applications and transfer of known methods to new domains.
+  \item Combinations of the above, or other forms of contributions relevant to your specific field.
+\end{itemize}
+
+
+\newthought{Here goes the outline of your thesis structure.} It is not about reciting chapter titles (although you want to make sure to 
+reference them in this block). It is rather about telling the story of your research journey:
+
+\marginnote{%
+ \newthought{The structure is for the reader.} You read that right, the structure is not primarily for you. 
+Of course a good structure helps you to organize and document your thoughts and work as you go - but it would be no good advice to limit yourself to that.
+Ultimately then, a well-organized thesis guides the reader through your research journey, 
+helping them understand your objectives, methods, findings, contributions and conclusions. 
+Again be as specific as possible in the outline.
+}
+
+
+\newthought{Now, that} the problem statement (see Sec.~\ref{sec:ProblemStatement}) is clearly defined, and the derived objectives have been outlined (see Sec.~\ref{sec:Objectives}).
+The following section (see Sec.~\ref{sec:RelatedWork}) provides the reader with the prerequisites, 
+based on an in-depth analysis of the related work and further introduces fundamental concepts in detail. 
+
+
+The Methods chapter (see Ch.~\ref{ch:Methods}) initiates the approaches, definitions, concepts, algorithms, metrics, and frameworks used to address the research objectives.
+
+Subsequently, results chapter (see Ch.~\ref{ch:Results}) introduces experimental setups, experimental design, datasets used, hardware, implementation details, 
+and presents the findings of your experiments and analyses. 
+Concluding, the contributions and findings are interpreted in the context of the related work (see Ch.~\ref{ch:Discussion}). 
+Implications and limitations are discussed and future directions are recommended. 
+
+
+
+\newpage
+% -----------------------------------------------------------------------------------------
+\section{Related Work and Fundamental Concepts}\label{sec:RelatedWork}
+
+\newthought{The related work} section summarizes and connects relevant literature to highlight and organize existing knowledge.
+Here goes everything a reader needs to digest in order to be enabled to understand your own work. Do not shy away from citing a lot of sources here, quote 
+equations, concepts and everything you will be needing to explain your own methods and work later on. 
+
+\marginnote{%
+  \newthought{Don't write a textbook.} While this section can be comprehensive, a base-level understanding of the field is assumed. As a rule of thumb,
+  a base-level understanding is everything you can read in a standard textbook.
+  Do not re-explain established concepts in great detail, rather reference seminal papers, and carry on. 
+  For example do not explain backpropagation in detail, rather reference the original paper briefly 
+  and move on to the specific variant you are using (if that is relevant to your work later on, otherwise omit it).
+  Go in-depth quickly, and fan out into the relevant parts there.
+}
+
+\subsection{First Sub-Field}
+\newthought{No header stands alone}, so start with an introduction paragraph, by giving an overview of the general aspects of the sub-field.
+
+\newthought{Outline the sub-fields} your work builds upon. Make sure to introduce and explain all relevant concepts,
+theories, models, and frameworks from these fields that are pertinent to your research.
+
+\subsection{Second Sub-Field}
+\newthought{No header stands alone}, so start with an introduction paragraph.
+\newthought{Topic 1} 
+\lipsum[66]
+
+\newthought{Topic 2} 
+\lipsum[75]
+
+
+
+

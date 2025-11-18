@@ -1,0 +1,84 @@
+
+
+\newthought{The methods section} is structured into sections reflecting the different aspects of your research.
+These sections initiate your novel approaches, concepts, designs, algorithms, metrics, evaluation strategies, analysis methods, and frameworks 
+used to address the research objectives.
+Include all relevant mathematical formulations, algorithms, hyperparameters and procedural steps necessary to understand your work.
+Ensure that the description is sufficiently detailed to allow readers to reproduce your approach and achieve comparable results.
+
+
+\marginnote{%
+  \newthought{This Chapter is the place} for visuals, schematics, pseudo code and mathematical equations.
+}
+
+
+\newthought{Start with an overview} that depicts your overall system, architecture, framework, and process flows.
+Think of this as the blueprint for your methods chapter. My doctoral advisor used to call this schematic \textit{the thesis in one slide}.
+The different components and their interactions should be clearly outlined. 
+It is nifty to repurpose the visuals of the components in the following sections, adding more detail there, while referencing back to the overview.
+
+% You want to contribute? This is the place you are looking for. 
+% I am still trying to find a good library to draw nice system diagrams in LaTeX, or at least include them nicely.
+% Bonus points using Tufte Style (maybe that package or library still needs to be written, maybe we should do that).
+% Getting this step standardized across theses would be great. Reach out if you think this is something you want to work on.
+
+\newthought{Where possible} these components can also map back to or even mirror the objectives defined in the Introduction.
+In any case do not loose touch with the problem statement and make sure to have it in mind when writing this Chapter and its sections.
+
+\marginnote{%
+  \newthought{Don't cite!}, reference. 
+  The methods section outlines your work, not the work of others. Existing knowledge needs to be described and introduced in the Introduction (see Sec.~\ref{sec:RelatedWork}). 
+  If you feel the need to refresh the reader on established methods, do so by referencing back.
+}
+
+\newthought{After the overview,} proceed to describe each component on a high level in text as well. If you are designing an entire new framework or system. 
+This is also the place to introduce new definitions, notations, or terminology that will be used throughout the rest of the thesis.
+
+
+\section{First Component}
+\newthought{Then proceed to describe} the individual components in dedicated sections. 
+
+\textit{Remember you wanted to reuse parts of the overview visuals here.}
+
+The transition between sections need to be motivated and logical, often advancements in one component bring about needs, 
+which are then adressed in following components. For example you might have a new data collection method, which in turn enables a new optimal model architecture,
+
+\begin{equation}
+\hat{y} = \theta^*(x),
+\end{equation}
+
+which in turn requires a new evaluation metric. And so forth.
+\marginnote{%
+  \newthought{Make use of margin notes} to provide ancillary definitions, extended explanations, walkthrough examples, or additional context which would otherwise disrupt the main narrative.
+  Things that are nice to know, or support the reader, but which are not essential to the core understanding.
+}
+Of course this is not always that linear, but try to keep a logical flow - branching out is expected.
+
+\section{Second Component}
+\newthought{The motivation of a new section} should be in the beginning of that very section, 
+so that the section itself is self-contained. 
+
+\textit{Remember you wanted to reuse parts of the overview visuals here.}
+
+This Chapter is usually where the beauty (see for yourself in Alg.~\ref{alg:gradient_descent}) of your work is to be found, having honed and refined your approaches over long hours. 
+
+
+\begin{algorithm}[H]
+  \caption{Pseudo-code for Gradient Descent Optimization. If this is not beautiful, I don't know what is.}
+  \label{alg:gradient_descent}
+  \begin{algorithmic}[1]
+    \Require Initial parameters $\theta_0$, learning rate $\epsilon$, loss function $L(\theta)$
+    \State $t \gets 0$
+    \While{not converged}
+      \State Compute gradient: $g_t \gets \nabla_\theta L(\theta_t)$
+      \State Update parameters: $\theta_{t+1} \gets \theta_t - \epsilon g_t$
+      \State $t \gets t + 1$
+    \EndWhile
+    \Return $\theta_t$
+  \end{algorithmic}
+\end{algorithm}
+
+
+This is where you demonstrate your creativity, and problem-solving abilities.
+
+
