@@ -1,0 +1,63 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thesis Artifact Submission
+%
+% Author: Dr.-Ing. Mark Schutera
+% Based on Tufte-style layout
+% 
+% This is the document to select when running your LaTeX build process
+% When in doubt, run: pdflatex -> bibtex -> pdflatex -> pdflatex
+% When still in doupt delete auxiliary files and try again
+\makeindex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{tufte}
+
+%%
+% Book metadata
+\title{Thesis Artifact Submission Three}
+\author[\defaultauthor]{\defaultauthor}
+\publisher[\defaultpublisher]{\defaultpublisher}
+
+% Load optional fonts
+\loadoptionalfonts
+
+% Additional packages
+\usepackage{pifont}
+\usepackage{amsmath}
+\usepackage{soul}
+\usepackage{textcase}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{float}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{lipsum}
+\setcitestyle{numbers,square}
+
+% Needed for the checklist
+\usepackage{amssymb}
+\usepackage{enumitem}
+\newcommand{\CheckedBox}{\checkmark} % or use \ding{51} from pifont
+
+\begin{document}
+\makestandardfrontmatter
+
+%% Start the main matter
+\mainmatter
+
+
+% ----------------------------------------------------------------------
+
+\chapter*{Instructions}
+\input{./Chapters/instructions}
+
+\chapter{Getting Submission Ready}
+\input{./Chapters/submissionready.tex}
+
+\makeaffirmation
+\marginnote{\newthought{Make sure to adjust the author name}, date, and location in the affirmation. You can find that in \texttt{./meta.tex}.}
+
+% ==========================================================================================================
+
+\end{document}

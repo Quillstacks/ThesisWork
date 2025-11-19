@@ -1,0 +1,126 @@
+%% meta.tex -- Shared metadata and templates 
+%% Author: Dr.-Ing. Mark Schutera
+
+%%
+% Default author information
+%%
+\newcommand{\defaultauthor}{Dr.-Ing. Mark Schutera}
+\newcommand{\defaultpublisher}{Unfinished Lecture Notes}
+\newcommand{\defaultlocation}{Germany, Planet Earth}
+
+
+%%
+% Copyright page template
+%%
+\newcommand{\makecopyright}[1][]{%
+  \newpage
+  \begin{fullwidth}
+  ~\vfill
+  \thispagestyle{empty}
+  \setlength{\parindent}{0pt}
+  \setlength{\parskip}{\baselineskip}
+  
+  Copyright \copyright\ \the\year\ \thanklessauthor
+  
+  \par\smallcaps{Published by \thanklesspublisher}
+    
+\par Licensed under the Creative Commons Attribution-NonCommercial 4.0 International License (``CC BY-NC 4.0''). 
+You may not use this file for commercial purposes. 
+You must obtain explicit permission from the author for uses beyond those permitted by this license. 
+To view a copy of this license, visit \url{https://creativecommons.org/licenses/by-nc/4.0/}. 
+Unless required by applicable law or agreed to in writing, distributed material is provided on an 
+\smallcaps{``AS IS'' BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND}, either express or implied. 
+See the license for details.\index{License}
+  
+  \par\textit{First printing, \monthyear}
+  \end{fullwidth}
+}
+
+%%
+% Standard front matter structure
+%%
+\newcommand{\makestandardfrontmatter}{%
+  \frontmatter
+  \maketitle
+  \makecopyright
+}
+
+%%
+% Standard acknowledgment template
+%%
+\newcommand{\makeacknowledgment}[1]{%
+  \cleardoublepage
+  \chapter*{Acknowledgements}
+  #1
+}
+
+%%
+% Standard affirmation page template
+%%
+\newcommand{\makeaffirmation}[1][]{%
+  ~\vfill
+  \thispagestyle{empty}
+  \setlength{\parindent}{0pt}
+  \setlength{\parskip}{\baselineskip}
+
+  \chapter*{Affirmation}
+
+  I hereby affirm that I have diligently followed all provided guides and instructions throughout the preparation of my thesis. 
+  I used checklists where applicable and ensured that all requirements were met to the best of my ability.
+  I confirm that this work represents my own original effort.
+
+  \vspace{2em}
+  \begin{flushright}
+    \rule{0.66\linewidth}{0.5pt}
+
+      \textit{\thanklessauthor}\\
+      \textit{\defaultlocation, \monthyear}
+  \end{flushright}
+}
+
+%%
+% Standard introduction template
+%%
+\newcommand{\makeintroduction}[1]{%
+  \cleardoublepage
+  \chapter*{Abstract}
+  #1
+}
+
+%%
+% Standard dedication page template
+%%
+\newcommand{\makededication}[1]{%
+  \cleardoublepage
+  \thispagestyle{empty}
+  ~\vfill
+  \begin{doublespace}
+  \noindent\fontsize{18}{22}\selectfont\itshape
+  \nohyphenation
+  #1
+  \end{doublespace}
+  \vfill
+  \vfill
+}
+
+
+%%
+% Standard tables command: Table of Contents, Figures, Tables, Equations, Abbreviations, Symbols. Yes, some of these are still missing in this template.
+% Looking for a place to contribute - you found it!
+%%
+\newcommand{\makestandardtables}{%
+  \cleardoublepage
+  \listoffigures
+  \cleardoublepage
+  \listoftables
+  }
+
+%%
+% Font options template
+%%
+\newcommand{\loadoptionalfonts}{%
+  % Font options (uncomment if available)
+  %\IfFileExists{bergamo.sty}{\usepackage[osf]{bergamo}}{}% Bembo
+  %\IfFileExists{chantill.sty}{\usepackage{chantill}}{}% Gill Sans
+  %\usepackage{microtype}
+}
