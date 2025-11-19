@@ -3,9 +3,14 @@
 ## Contents
 
 - HowToThesis: This is where the guide on how to write a thesis lives
-- ThesisRoadmap: This shows the steps, milestones, and organizational elements
 - ThesisTemplate: This is a basic thesis template with minimal structure
-- Shared Assets: This is where the cls file for latex and meta information is stored
+- Artifact One: Literature Research and Problem Statement
+- Artifact Two: Thesis Overview and Proof of Concept
+- Artifact Three: Getting Submission ready with Guidelines and Checklists
+
+To be done:
+- ThesisRoadmap: This shows the steps, milestones, and organizational elements of your thesis journey
+
 
 
 <br>
