@@ -1,0 +1,71 @@
+
+\section{Timeline}
+\newthought{Begin with a concise overview of your project’s current status} compared to the plan you outlined earlier.
+Take this opportunity to reflect on your objectives and timeline, and discuss any adjustments you have made or need to make.
+You can use Table~\ref{tab:timeline} as a reference for structuring your updated timeline. Ensure the descriptions are actionable and specific to your work. 
+The table does not count toward your page limit, so provide as much detail as needed.
+
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{p{0.23\linewidth} p{0.55\linewidth} p{0.17\linewidth}}
+    \toprule
+    \textbf{Milestone} & \textbf{Description} & \textbf{Timeline} \\
+    \midrule
+    Review & Survey recent and seminal works, identify gaps and relevant ressources. & Week 1 \\
+    Definition & Formulate research questions and hypotheses based on literature findings. & Week 2 \\
+    Development & Prepare data, develop methods, and conduct experiments. & Week 3--9 \\
+    Evaluation & Analyze results, compare with baselines, and interpret findings. & Week 7--11 \\
+    Submission & Document methods, results and conclusions; polish for thesis submission. & Week 10--12 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Project timeline and milestones for a 12-week research project (e.g. Bachelor Thesis).}
+  \label{tab:timeline}
+\end{table}
+
+
+
+\section{Overview Schematic}
+
+\newthought{Start with an overview} that depicts your overall system, architecture, framework, and process flows.
+Think of this as the blueprint for your methods chapter - again this exercise is a means to an end. 
+My doctoral advisor used to call this schematic \textit{the thesis in one slide}.
+The different components and their interactions should be clearly outlined. Where possible these also map back to your objectives and prefigure your final contributions. 
+
+\newthought{With the overview schematic in mind,} proceed to describe each component on a high level in text as well. 
+
+
+
+
+
+
+
+\section{Proof of Concept}
+\marginnote{\newthought{This is the place}, for visuals, equations, or pseudo-code snippets that illustrate your approach.}
+
+\newthought{Introduce the prototype, proof of concept or initial implementation work} you have completed. 
+Demonastrate development activity by providing a deployment or a means to deploy and reproduce your work.
+Think jupyter notebook, think Docker container, think API endpoints, think Demo Video - whatever suits your project best, 
+and make sure to provide access.
+This may also include pseudo code, initial experimental results, data analysis, or design of experiments, which you should document here.
+
+\begin{algorithm}[H]
+  \caption{Pseudo-code for Gradient Descent Optimization. If this is not beautiful, I don't know what is.}
+  \label{alg:gradient_descent}
+  \begin{algorithmic}[1]
+    \Require Initial parameters $\theta_0$, learning rate $\epsilon$, loss function $L(\theta)$
+    \State $t \gets 0$
+    \While{not converged}
+      \State Compute gradient: $g_t \gets \nabla_\theta L(\theta_t)$
+      \State Update parameters: $\theta_{t+1} \gets \theta_t - \epsilon g_t$
+      \State $t \gets t + 1$
+    \EndWhile
+    \Return $\theta_t$
+  \end{algorithmic}
+\end{algorithm}
+
+\newthought{Finish this section} by summarizing the key functionalities of your prototype or initial implementation, 
+and which aspects are still under development or pending validation.
+
+
+
+
