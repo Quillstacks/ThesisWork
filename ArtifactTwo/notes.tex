@@ -2,6 +2,7 @@
 % How to Write a Scientific Thesis
 % Author: Dr.-Ing. Mark Schutera
 % Based on Tufte-style layout
+\makeindex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass{../sharedAssets/tufte}
@@ -34,7 +35,7 @@
 \makestandardfrontmatter
 % Dedication
 % Alternative quotes:
-\makededication{\openepigraph{“Not all those who wander are lost”}{Bilbo Baggins}}
+\makededication{\openepigraph{“Research is formalized curiosity. It is poking and prying with a purpose”}{Wernher von Braun}}
 \tableofcontents
 
 
@@ -50,6 +51,8 @@
 
   \newthought{This document is a living work and should not be considered complete}—there are approaches I have tested and refined, 
   others I am still exploring, some I will adapt based on new insights, and perspectives I thought I understood but continue to evolve.
+
+  \newthought{Make sure to use} the knowledge distilled in this resource. 
   }
 
 
@@ -65,52 +68,42 @@ via GitHub \url{https://github.com/Quillstacks/ThesisWork} to report issues and 
 
 % ----------------------------------------------------------------------
 
-\chapter{Preamble}
+\chapter{Preamble}\index{Preamble}
 
 
-\section{Best Practices}
+\section{Best Practices}\index{Best Practices}
 
-\newthought{Select a topic} that aligns with your interests and career goals.
+\newthought{Select a topic}\index{Topic selection} that aligns with your interests and career goals.
 Ensure the topic is feasible within the given timeframe and resources. To discuss a potential topic with a supervisor, 
 prepare a brief proposal outlining your research question, objectives, and methodology. 
 
-\newthought{Manage your responsibilities} when engaging in a cooperation between industry and academia.
+\newthought{Manage your responsibilities}\index{Industry cooperation} when engaging in a cooperation between industry and academia.
 Students must manage both tasks carefully, as this is a great way to learn what is of interest to the practitioner, 
 the requirements for the thesis and the external position may differ at times.
 
-\newthought{Ensure the supervisor's} research interests and expectations align with your thesis work.
+\newthought{Ensure the supervisor's}\index{Supervisor} research interests and expectations align with your thesis work.
   Look for supervisors with a strong track record in guiding successful theses. 
   Reflect on whether you prefer a hands-on or hands-off mentorship style and choose accordingly.
 
-\newthought{Templates}, there are usually always templates provided by your institution, or Professor, make use of them.
-\marginnote{
-  \newthought{To Get} your template click 
-  \href{https://github.com/Quillstacks/ThesisWork/tree/952300e7be221eb82c4f1b615db7cd3ace1ce774/ThesisTemplate}{ here.}
-  Also for you who uses another template, but wants to find guidance on thesis structure.
-  }
+\newthought{Templates}\index{Templates}, there are usually always templates provided by your institution, or Professor, make use of them.
 
-\marginnote{
-  \newthought{DHBW Ravensburg} provides a LaTeX template as well which can be found
-  \href{https://onedrive.live.com/?cid=476767771CCA9062&id=476767771CCA9062!s1b9e4e9537e5415ba4bc0b2c042de30e}{here.}
-}
-
-\newthought{Read this Guideline}, really this will take you a long way. A nice side-effect is that feedback and discussion 
+\newthought{Read this Guideline}\index{Guideline}, really this will take you a long way. A nice side-effect is that feedback and discussion 
 rounds will be more focused on content than formatting or structure - your work and you can only benefit from that.
 
-\newthought{Start early} and divide your work into manageable efforts, with clear artifacts. Do the same for your writing - for same page you will need a whole day. 
+\newthought{Start early}\index{Start early} and divide your work into manageable efforts, with clear artifacts. Do the same for your writing - for same page you will need a whole day. 
 Start early, get a first prototype or draft down, and iterate. The first thing you want to have is an outline of your thesis structure.
 
-\marginnote{
-  \newthought{A great first outline} \\
-  can be your table of contents.}
+\marginnote{%
+  \textbf{A great first outline} \\
+ can be your table of contents.}
 
  Then go for your full introduction part, which helps you clarify your problem statements and targeted contributions. 
 
-\newthought{Write in English} at all cost. This is research, you are writing to be read and to make an impact with your contribution.
-Don't handicap yourself by writing in a language that is not widely understood in the scientific community. Make use of our lingua franca - English. 
+\newthought{Write in English}\index{English} at all cost. This is research, you are writing to be read and to make an impact with your contribution.
+Don't handicap yourself by writing in a language that is not widely understood in the scientific community. Make use of our lingua franca - English (US). 
 
 
-\newthought{Read your Thesis}
+\newthought{Read your Thesis}\index{Read thesis}
 You should have read your own thesis multiple times before submitting it. 
 You should have read it for flow, for structure, for content, for formatting, for appearance, for typos, for grammar, for punctuation - you name it.
 \marginnote{%
@@ -118,32 +111,32 @@ You should have read it for flow, for structure, for content, for formatting, fo
 }
 You should have someone else read it as well, preferably someone who is not familiar with your work.
 
-\newthought{Use LaTex} to write your thesis. Personally, I can recommend Visual Studio Code combined with the extensions LaTeX Workshop (for TeX support)
+\newthought{Use LaTex}\index{LaTeX} to write your thesis. Personally, I can recommend Visual Studio Code combined with the extensions LaTeX Workshop (for TeX support)
 and LTeX (for spell and style checking). 
 
-\newthought{Establish a plan}, it is crucial to establish a personal schedule and workflow. 
+\newthought{Establish a plan}\index{Planning}, it is crucial to establish a personal schedule and workflow. 
 Unlike regular coursework, writing a thesis comes with no fixed timetable.
  You must decide for yourself when and how long to work, and set your own milestones. 
  Do not underestimate the importance of planning and executing the plan. 
  Develop a routine that fits your productivity peaks and other commitments. 
 
-\newthought{Stay organized}, keep track of your sources, notes, and drafts. Your thesis document, can help a lot in this, 
+\newthought{Stay organized}\index{Organization}, keep track of your sources, notes, and drafts. Your thesis document, can help a lot in this, 
 but should not be the only place where you structure, plan and document your experiments and work.
 
-\newthought{Back Up your Work}. Use version control to be able to recover your work. Back up regularly, better automatically.
+\newthought{Back Up your Work}\index{Backup}. Use version control to be able to recover your work. Back up regularly, better automatically.
 And this is not only about your writing, but also your code, data, and any other digital artifacts you create during your research.
 
-\newthought{Constant dripping} wears away the stone. Constant progress, even if small, accumulates over time and leads to significant results.
+\newthought{Constant dripping}\index{Persistence} wears away the stone. Constant progress, even if small, accumulates over time and leads to significant results.
 Work on your thesis every day, and avoid long breaks. Thoughts need time to mature and incubate in your brain, 
 even when you are not actively working on your thesis.
 
-\newthought{Motivation fluctuates.} This is normal. Progress is not linear, so frustration and self-doubt are part of the game. Embrace it, this is not only you.
+\newthought{Motivation fluctuates.}\index{Motivation} This is normal. Progress is not linear, so frustration and self-doubt are part of the game. Embrace it, this is not only you.
 In such times it is even more important to stick to the routine, divide work into small manageable tasks, and celebrate small wins. Welcome to the grind. 
 \marginnote{%
-  \newthought{When nothing else works}, fall back to what I call productive procrastination—organize notes, format your writing, polish figures.
+  \newthought{When nothing else works}, fall back to what I call \textit{productive procrastination}—organize notes, format your writing, polish figures.
 }
 
-\newthought{When you get stuck} there are a few strategies:
+\newthought{When you get stuck}\index{Problem solving} there are a few strategies:
 \begin{itemize}
   \item Solve an easier version of the problem first.
   \item Use another approach or method.
@@ -151,7 +144,7 @@ In such times it is even more important to stick to the routine, divide work int
 \end{itemize}
 
 
-\section{Brief Note on the Use of AI}
+\section{Brief Note on the Use of AI}\index{AI}
 \textit{"The use of AI does not change the fundamental principles of academic integrity.
 AI tools should be regarded as supplementary resources, similar to calculators,
 and used with responsibility and understanding."} \cite{FreiburgThesisGuideline2025}.
@@ -159,9 +152,9 @@ and used with responsibility and understanding."} \cite{FreiburgThesisGuideline2
 
 \marginnote{
   In short. When you try to hit a nail with a hammer, you can not blame the hammer if you end up hitting your thumb.
-  It will have been you. This should not stop you from using the hammer in the first place.\\
+  It will have been \textbf{you}. This should not stop you from using the hammer in the first place.\\
 
-  \newthought{Just ask yourself}: Am I producing original and thoughtful work? You should be able to answer with yes.
+  Just ask yourself: Am I producing original and thoughtful work? You should be able to answer with yes.
 }
 \newthought{AI} is here to stay, it is to be understood as a tool, a tool you need to gain proficiency with.
 As such I encourage you to explore the use of AI tools in your thesis and research work while being mindful of their limitations.
@@ -194,6 +187,194 @@ as proposed in~\cite{KielUniversity2025}.
 
 
 
+
+
+
+
+
+%----------------------------------------------------------------------
+
+\chapter{Structure and Scope}\index{Structure}
+
+\marginnote{
+ \textbf{Common Thesis Structure:} \\
+ 1. Title Page \\
+ 2. Abstract \\
+ 3. Affirmation \\
+ 4. Acknowledgements \\
+ 5. Table of Contents \\
+ 6. List of Figures and Tables \\
+ 7. List of Equations \\
+ 8. List of Abbreviations \\
+ 9. List of Symbols \\
+ 10. IMRD Body \\
+ 11. Index \\
+ 12. References \\
+ 13. Appendices \\
+ }
+
+\newthought{The structure is for the reader.} You read that right, the structure is not primarily for you. 
+Of course a good structure helps you to organize and document your thoughts and work as you go - but it would be no good advice to limit yourself to that.
+Ultimately then, a well-organized thesis guides the reader through your research journey, 
+helping them understand your objectives, methods, findings, contributions and conclusions.\\
+
+\newthought{While some flexibility} is allowed and even encouraged to adapt the structure to your specific research topic and methodology,
+the following sections outline a commonly accepted structure for scientific theses. The IMRD (Introduction, Methods, Results, Discussion) is a good starting point.
+
+
+\section{Abstract}\index{Abstract}
+\newthought{The abstract} provides a concise summary of your thesis, including the research question, 
+chosen approach, key findings, and their interpretation. 
+It should be no longer than half a page. While optional, feel free to write the abstract in English 
+and the native language of your institution.
+The abstract is best written after the main sections are complete, 
+ensuring it accurately reflects the content and contributions of your work.
+
+
+
+\section{Introduction}\index{Introduction}
+\newthought{The introduction} is $20 - 30\%$ of the total thesis length and is structured into: 
+\begin{itemize}
+  \item Context and Motivation
+  \item Related Work and Background through Literature Review
+  \item Research Gap and Problem Statement
+  \item Objectives and their Significance
+  \item Thesis Structure Overview
+\end{itemize}
+
+\marginnote{\textbf{Lengthy motivation sections}\\
+  covering \textit{how autonomous driving brings down traffic accidents by 90\%}, or reiteration of broad concepts, 
+  or (humble bragging around) how awesome your industrial partner is, or similar topics, are to be avoided - A short single sentence will do.
+  Then focus on motivating your specific field and research problem.
+}
+
+Begin with a broad yet short overview to provide context and motivation in the current field.
+
+\newthought{Related Work -} or State of the Art, summarizes and connects relevant literature to highlight and organize existing knowledge and identify \textbf{gaps}. 
+Sometimes this is extended to a section on preliminary, or foundational concepts - however when you go that path, don't put too much into it. 
+Make use of Google Scholar as a tool to do so.
+\marginnote{%
+  \textbf{Gaps can be diverse}, \\
+    \textit{Inconsistencies or contradictions} in existing studies. \\
+    Methodological \textit{limitations} in previous research\\
+    Missing \textit{transfer} of methods between fields of application. 
+}
+Select your sources carefully and evaluate whether they are worthy of citation - in general they should be peer-reviewed. 
+Exceptions are seminal works, grey literature, or highly cited non-peer-reviewed sources. Make sure to evaluate the quality of a working paper, 
+for example, by looking at other scientific contributions of the authors or the affiliated institution. 
+
+\newthought{Citations} are essential in academic writing to give credit to original sources and avoid plagiarism. You have to include a reference to the original source in the text for every argument, source code, information, or line of thought that originates from another author.
+Failing to do so will result in your work being classified as plagiarism and considered an attempt to deceive. 
+
+
+  
+  
+
+\newthought{Narrow down} to the specific problem statement (in 2-4 bullet points)  or research question your thesis aims to address.
+Then clearly (in 2-4 bullet points) mirror the problem statement and articulate the contributions you will be making and the significance of your work, 
+and how the field will benefit from your work.\\
+
+\marginnote{
+\newthought{Schöpfungshöhe}, a certain level of originality and creativity required in academic work, is closely linked to the nature of your contributions. 
+You will soon find yourself trading off between high-risk-high-impact ideas and more conservative incremental objectives. 
+I advise to aim for a mix when defining your contributions: A workhorse (driven by execution and rigor), a staircase (small incremental improvement on a known method), 
+a moonshot (high-impact idea or novel recombination, which might fail).
+}
+
+Conclude the introduction with a brief (really brief) outline of the thesis structure, guiding the reader on what to expect in the subsequent chapters.
+
+
+\section{Methods}\index{Methods}
+
+\newthought{The methods section} is $40 - 50\%$ of the total thesis length and is structured into 2-3 sections.
+Describe the methodology used to address the research questions. 
+Include all relevant mathematical formulations, algorithms, concepts and thoroughly explain the processes of data collection, generation, and analysis. 
+Ensure that the description is sufficiently detailed to allow readers to reproduce your approach and achieve comparable results.
+
+\begin{itemize}
+  \item Research Design and Approach (usually new or adapted models/algorithms)
+  \item Data Collection and Preparation or Description
+  \item Experimental Setup and Implementation
+  \item Evaluation Metrics and Analysis Methods
+  \item Reproducibility and Validation
+\end{itemize}
+
+\newthought{Start with an overview} figure that depicts your overall architecture, flow and research design.  
+Then proceed to describe the individual components in dedicated sections. The transition between sections need to be motivated and logical.
+
+\newthought{Do not loose touch} with the problem statement and objectives defined in the introduction, make sure to clearly link back to them where appropriate.
+
+\newthought{This chapter} contains the theoretical foundations, models, algorithms, experimental setups, data recorded, metrics, evaluation strategies, or analytical techniques employed in your research.
+
+\marginnote{
+  \newthought{Don't cite!}, reference. 
+  \textit{The methods section outlines your work, not the work of others. Existing knowledge needs to be described and introduced in the Introduction. 
+  If you feel the need to refresh the reader on established methods, do so by referencing back.}
+}
+
+
+
+
+
+\section{Results}\index{Results}
+\newthought{The results section} is $25 - 35\%$ of the total thesis length and presents the findings of your research.
+Results should be presented as objectively as possible, without mixing interpretation or discussion. 
+Focus on reporting the findings clearly and concisely, using neutral language and avoiding subjective statements. 
+
+\newthought{Always have several (at least two) benchmarks} to compare your results against. Great benchmarks are human performance, state-of-the-art methods,
+established baselines, theoretical limits, or \textbf{heuristics}.
+
+
+\marginnote{
+  \newthought{Visual aids} such as tables, graphs, and charts are invaluable.
+}
+
+\newthought{Structure your results} by grouping related findings and presenting them in a logical order (some might call this story telling) 
+that reflects your research objectives. 
+Each result should be linked to the corresponding problem statement - again.
+
+\begin{itemize}
+  \item Present quantitative results with appropriate statistical measures (e.g., means, standard deviations, confidence intervals).
+  \item Use tables to organize numerical data and figures to illustrate trends, patterns, or relationships.
+  \item \textbf{Avoid interpreting or explaining} the implications of the results in this section; reserve such commentary for the discussion part.
+\end{itemize}
+
+
+
+
+\section{Discussion}\index{Discussion}
+
+\newthought{The discussion section} is $15 - 20\%$ of the total thesis length and interprets and contextualizes your results, linking them back to your research questions and objectives.
+A good practice is to make the linkage to your objectives explicit, by again using a bullet point list mirroring the objectives from the introduction.
+
+\marginnote{
+  \newthought{Conclusion}, think: Take-home message.\\
+}
+
+\newthought{Feel free to split} the \textit{Discussion} into a \textit{Discussion} and \textit{Conclusion} part. 
+
+\newthought{The discussion} interprets and contextualizes your results and their limitations.
+\newthought{While the conclusion} clearly distills the the main contributions of your work, reflects on implications, and points to future work.
+
+
+
+
+
+\section{Appendices}\index{Appendix}
+\newthought{The appendix} contains tables, data, questionnaires, proofs, derivations, and other ancillary information that might 
+otherwise negatively affect the flow of the main text. 
+The main text must reference the appendix where appropriate. 
+Do not use the appendix for outsourcing text that does not fit into the main text due to page restrictions. 
+Include an appendix only when necessary.
+
+
+
+
+
+
+ 
+  
+
   
  
 
@@ -202,7 +383,7 @@ as proposed in~\cite{KielUniversity2025}.
 
 
 % ----------------------------------------------------------------------  
-\chapter{Format}
+\chapter{Format}\index{Format}
 
 \newthought{As you will be using a template} to write your thesis, you will be adhering to a predefined format already.
 This includes specifications for margins, font size, line spacing, and citation style. But this only gets you so far.
@@ -210,11 +391,11 @@ This includes specifications for margins, font size, line spacing, and citation 
 Sadly this is where many theses fail to deliver on a basic expectation, this is completely unnecessary - this is something to grind your way out.
 \marginnote{Great formatting requires diligence, the good news is, this \textit{only} requires diligence.}
 
-\section{On Length}
+\section{On Length}\index{Length}
   \newthought{Brevity is valued} -so you should write as little as possible, as much as necessary.
 
   \marginnote{
-    \newthought{On being concise:} \\
+    \textbf{On being concise:} \\
     Embrace short sentences and paragraphs, no fill-words. \\
     Equations and figures can condense information by a lot. \\
     Focus on the core aspects.}
@@ -223,20 +404,20 @@ Sadly this is where many theses fail to deliver on a basic expectation, this is 
   \begin{itemize}
     \item A title or header should have no more than 13 words.
     \item A sentence should have around 15–20 words, maximum 25 words.
-    \item A paragraph or subsection should ideally be around 75–140 words, maximum 200 words.
-    \item A section should ideally be around 1,200–2,000 words, maximum 2,800 words.
-    \item A chapter should ideally be around 2,400–4,800 words, maximum 6,000 words.
-    \item A thesis should ideally be around 12,000–18,000 words, maximum 24,000 words.
+    \item A paragraph or subsection should ideally be around 5–7 sentences, maximum 10 sentences.
+    \item A section should ideally be around 3–5 pages, maximum 7 pages.
+    \item A chapter should ideally be around 6–12 pages, maximum 15 pages.
+    \item A thesis should ideally be around 30–45 pages, maximum 60 pages.
   \end{itemize}
 
-\section{On Hierarchy}
-\marginnote{
+\section{On Hierarchy}\index{Hierarchy}
+\marginnote{%
  1. Chapter \\
  2. Chapter \\
  2.1 Section \\
- 2.1.1 Subsection no, see a) \\
- 2.1.1.1 Subsubsection no, see b)  \\
- 2.1.1.2 Subsubsection no, see b)  \\
+ 2.1.1 Subsection \textbf{no, see a)} \\
+ 2.1.1.1 Subsubsection \textbf{no, see b)}  \\
+ 2.1.1.2 Subsubsection \textbf{no, see b)}  \\
  2.2 Section \\
  }
 Subsections should be numbered using a decimal system that reflects their hierarchical position within the chapter (e.g., 1., 1.1, 1.2, 2.1, etc.).
@@ -248,30 +429,11 @@ Dividing only makes sense if,
     \item there is enough and distinct content to justify it.
 \end{enumerate}
 
-\newthought{Margin Notes}, in general these should be used to provide supplementary information,
-clarifications, or additional context that enhances the main text, yet would disrupt its flow otherwise.
-They should be concise and directly relevant to the adjacent content. 
 
 
-\section{On Fontstyle}
-When using the Tufte-LaTeX template, the font styles are predefined. However, here are some general guidelines for using font styles effectively in your thesis:
-\begin{itemize}
-  \item Bold is used for emphasis, such as highlighting key terms or concepts when they are first introduced. Especially the key (first) term in lists.
-  \item Italics are used for emphasis within a sentence, for foreign words, or for direct quoting.
-  \item Underlining is generally avoided in academic writing, as it can be confused with hyperlinks in digital documents. Instead, use italics or bold for emphasis.
-\end{itemize}
 
-\newthought{Marginnotes}, typically use a smaller font size, which is predefined in the Tufte-LaTeX template.
-Ensure that the font style in margin notes is consistent with the main text for a cohesive appearance. Shy away from using italic, bold styles - when needed use \textit{newthought} all caps.
-
-\newthought{Quotes} 
-\begin{quote}
-  This is a block quote example. Block quotes are used for longer quotations that exceed a certain length (usually more than four lines of text). They are typically indented and may use a smaller font size to distinguish them from the main text.
-\end{quote}
-
-\vfill
 %----------------------------------------------------------------------
-\section{Lists}
+\section{Lists}\index{Lists}
 \marginnote{%
   Keep each item of a bullet point list, \\
   \begin{itemize}
@@ -301,30 +463,30 @@ Use appropriate punctuation at the end of each list item, using commas or semico
 
 
 %----------------------------------------------------------------------
-\section{Figures and Tables}
+\section{Figures and Tables}\index{Figures}\index{Tables}
 
 Figures and tables should be numbered consecutively throughout the thesis for easy reference. 
 They should be placed as close as possible to the first point of reference in the text - that also means there is at least one.
 Each figure and table should have a clear and descriptive caption that explains its content and relevance. Keep it concise 2-3 sentences.
 For further guidance on visualizing data effectively, refer to Tufte's principles on the visual display of quantitative information~\cite{TufteVisuals2001}.
 
+\begin{figure}[!ht]
+  \includegraphics[width=\linewidth]{figures/tufte-line.png}
+  \caption{Basic line graph after Tufte. Data emphasized, axes info in title, minimal ticks, reduced non-data ink.}
+  \label{fig:linegraph}
+\end{figure}
 
-
-\newthought{Tufte's Principles for Effective Figures (for comparison see Fig.~\ref{fig:linegraph}):}
-\begin{itemize}
+\newthought{Tufte's Principles \cite{TufteVisuals2001} for Effective Figures (for comparison see Fig.~\ref{fig:linegraph}):}
+\begin{enumerate}
     \item \textbf{Maximize the Data-Ink Ratio:} Use as little non-essential ink as possible (including colour usage). Every mark should represent data or support its understanding.
     \item \textbf{Erase Non-Data Ink (Chartjunk):} Remove decorative elements such as borders, heavy gridlines, 3D effects, shading, clip art, etc. If it doesn’t convey information, it shouldn’t be there.
     \item \textbf{Erase Redundant Data-Ink:} Don’t repeat information unnecessarily—avoid duplicate labels, overly dense tick marks, thick axes, repeated symbols. Keep only what’s needed.
     \item \textbf{Emphasize Clarity and Precision:} Be accurate, honest, and exact in visual encoding—use proportional scales, correct baselines, avoid distortion and misleading area/volume effects. Clarity over decoration.
     \item \textbf{Use Small Multiples:} Present multiple comparable graphics with consistent design. Useful for comparing groups, showing changes over time, or exploring multidimensional data.
     \item \textbf{Integrate Words, Numbers, and Graphics:} Place labels near the data, integrate text directly into the plot, and avoid legends unless unavoidable. Visual and textual explanations should coexist naturally.
-\end{itemize}
+\end{enumerate}
 
-\begin{figure}[!ht]
-  \includegraphics[width=\linewidth]{figures/tufte-line.png}
-  \caption{Basic line graph after Tufte. Data emphasized, axes info in title, minimal ticks, reduced non-data ink.}
-  \label{fig:linegraph}
-\end{figure}
+
 
 
 \newthought{When referencing} figures and tables in the text, use their assigned numbers (e.g., "as shown in Figure 2.1" or "see Table 3.2") - LaTex does that for you.
@@ -333,7 +495,7 @@ If you want to keep it short it is also acceptable to write (see Fig.~2.1) or (s
 
 \begin{table}[!ht]
   \centering
-  \caption{Example of a well-formatted table with a clear, concise caption. Make sure to go \textit{full width} for tables and figures, and embrace \textit{horizontal lines}, while avoiding vertical lines.}
+  \caption{Example of a well-formatted table with a clear, concise caption. Make sure to go \textbf{full width} for tables and figures, and embrace \textbf{horizontal lines}, while avoiding vertical lines.}
   \label{tab:example}
   \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcc}
     \toprule
@@ -346,10 +508,10 @@ If you want to keep it short it is also acceptable to write (see Fig.~2.1) or (s
 \end{table}
 
 \marginnote{\newthought{Descriptive} meaning, that it answers the question, 
-What am I looking at and why is it important?. Not, "on the x-Axis we have time in seconds.\\
+\textit{What am I looking at and why is it important?}. Not, \textit{"on the x-Axis we have time in seconds}.\\
 \vspace{1em}
-  A good example: \\
-    Figure 2.1: Overview of AI adoption trends across industries, illustrating the rapid increase in usage and highlighting key sectors driving innovation. \\
+  \textbf{A good example:} \\
+    \textit{Figure 2.1: Overview of AI adoption trends across industries, illustrating the rapid increase in usage and highlighting key sectors driving innovation.} \\
   }
 
 \newthought{Ensure} that all figures and tables,
@@ -361,8 +523,8 @@ What am I looking at and why is it important?. Not, "on the x-Axis we have time 
 \end{itemize} 
 
 
-\vfill
-\section{Mathematical Notation and Equations}
+
+\section{Mathematical Notation and Equations}\index{Mathematical notation}\index{Equations}
 
 \marginnote{%
   scalar variables: \(x, y, z\) \\
@@ -388,13 +550,11 @@ such as "The relationship between force $\textbf{F}$, mass $m$, and acceleration
 Notice how the equation is part of the sentence and ends with a period. When embedded into a sentence use a comma if the sentence continues after the equation.
 When displaying equations, center them on the page and number them consecutively for easy reference (e.g., Eq.~1, Eq.~2).
 
-\newthought{On numbers and units.} Numbers should be written consistently, using either words (until twelve) or numerals based on context. 
-Always include units with numerical values, using the International System of Units (SI) where applicable.
 
-\section{Code}
+\section{Code}\index{Code}
   \label{sec:code}
   \marginnote{%
-    \newthought{Runs on my machine.} \\
+    \textbf{Runs on my machine.} \\
     Is not acceptable, make sure to host your solution (or a meaningful part of it). At least provide a Docker container or similar means to reproduce your results fast and reliably.
   }
 
@@ -411,23 +571,21 @@ Always include units with numerical values, using the International System of Un
   \begin{algorithm}[H]
   \caption{Pseudo-code for Gradient Descent Optimization}
   \begin{algorithmic}[1]
-    \Require Initial parameters $\theta_0$, learning rate $\epsilon$, loss function $L(\theta)$
+    \Require Initial parameters $\theta_0$, learning rate $\alpha$, loss function $L(\theta)$
     \State $t \gets 0$
     \While{not converged}
       \State Compute gradient: $g_t \gets \nabla_\theta L(\theta_t)$
-      \State Update parameters: $\theta_{t+1} \gets \theta_t - \epsilon g_t$
+      \State Update parameters: $\theta_{t+1} \gets \theta_t - \alpha g_t$
       \State $t \gets t + 1$
     \EndWhile
     \Return $\theta_t$
   \end{algorithmic}
   \end{algorithm}
 
-
-\vfill
-\section{Abbreviations}
+\section{Abbreviations}\index{Abbreviations}
 \newthought{Abbreviations} need to be defined upon their first use in the text.
 \marginnote{%
-  For example, Artificial Intelligence (AI). \\
+  For example, \textit{Artificial Intelligence (AI)}. \\
   Thereafter, the abbreviation can be used throughout the document. \\
 }
 Ensure that abbreviations are used consistently and appropriately, avoiding overuse which can hinder readability.
@@ -435,22 +593,22 @@ In titles, headings, and figure and table captions, abbreviations are not to be 
 
 
 
-\section{Punctuation and Signs}
+\section{Punctuation and Signs}\index{Punctuation}\index{Signs}
 \newthought{Punctuation} in English clarifies meaning and aids readability. 
 \marginnote{
-	\newthought{Examples:}
+\textbf{Examples:}
 \begin{itemize}
-  \item Capital: Dr David James is the consultant at Leeds City Hospital.
-  \item Full stop: We went to France last summer.
-  \item Question mark: Why do they make so many mistakes?
-  \item Exclamation: Listen!
-  \item Comma: It’s important to write in clear, simple, accurate words.
-  \item Colon: There are three main reasons: economic, social, political.
-  \item Semi-colon: Spanish is spoken throughout South America; in Brazil the main language is Portuguese.
-  \item Quotation: She said, “Where can we find a nice Indian restaurant?”
-  \item Dash: Our teacher – who often gets cross – wasn’t cross at all.
-  \item Brackets: Thriplow (pronounced ‘Triplow’) is a small village.
-  \item Numerals: 7,980 (thousands), 6.5 (decimal)
+  \item Capital: \textit{Dr David James is the consultant at Leeds City Hospital.}
+  \item Full stop: \textit{We went to France last summer.}
+  \item Question mark: \textit{Why do they make so many mistakes?}
+  \item Exclamation: \textit{Listen!}
+  \item Comma: \textit{It’s important to write in clear, simple, accurate words.}
+  \item Colon: \textit{There are three main reasons: economic, social, political.}
+  \item Semi-colon: \textit{Spanish is spoken throughout South America; in Brazil the main language is Portuguese.}
+  \item Quotation: \textit{She said, “Where can we find a nice Indian restaurant?”}
+  \item Dash: \textit{Our teacher – who often gets cross – wasn’t cross at all.}
+  \item Brackets: \textit{Thriplow (pronounced ‘Triplow’) is a small village.}
+  \item Numerals: \textit{7,980} (thousands), \textit{6.5} (decimal)
 \end{itemize}
 }
 
@@ -461,9 +619,9 @@ semi-colons (link related clauses), quotation marks (direct speech, highlight wo
 dashes/brackets (extra info), and numerals (full stops for decimals, commas for thousands)~\cite{CambridgePunctuation}.
 
 Punctuation marks should be placed inside quotation marks if they are part of the quoted material, and outside if they are not.
-In terms of visual appearance, punctuation and other signs can not be at the beginning of a line, bind signs to a word by making use of ~ in LaTeX.
+In terms of visual appearance, punctuation and other signs can not be at the beginning of a line, bind signs to a word by making use of \textit{~} in LaTeX.
 
-\section{Line and Page Breaks}
+\section{Line and Page Breaks}\index{Line breaks}\index{Page breaks}
 \newthought{Widows and orphans} are to be avoided at all cost.
 A widow is a single word or short line that appears at the end of a paragraph and is left alone at the top of a new page, after a table or figure or column.
 An orphan is a single word or short line that appears at the beginning of a paragraph and is left alone.
@@ -476,19 +634,19 @@ To prevent widows and orphans, adjust the text by rewriting sentences or changin
 
 
 % ----------------------------------------------------------------------
-\chapter{Writing}
+\chapter{Writing}\index{Writing}
 
 \newthought{Write with the reader in mind.}
 \marginnote{%
   \newthought{A thesis} is usually not read in linear sequence. But rather Abstract - Problem Statement - Conclusion.\\
-  And only then will the inclined reader go for the methods and results sections in depth. Make sure to not loose them on the way.
+  \textit{And only then will the inclined reader go for the methods and results sections in depth. Make sure to not loose them on the way.}
 }
 
 
 \newthought{Good scientific writing} is an art form - it is clear, specific, concise, and coherent. 
 An indepth treatment of style and writing is delivered by Steven Pinker \cite{PinkerSenseOfStyle2014}
 
-\section{Be Clear}
+\section{Be Clear}\index{Clarity}
 It is crucial to establish a central idea or line of thought that runs throughout your thesis. 
 This theme should be reflected in the title, table of contents, and in the relevance of every sentence and section to your main research question. 
 Always make clear to the reader how each part of your work connects back to your problem statements.
@@ -500,14 +658,14 @@ If any word, sentence, paragraph, or section does not support your central theme
 
 
 
-\section{Be Specific}
+\section{Be Specific}\index{Specificity}
 Always argue based on results and sources - and whenever possible quantify. 
 Avoid vague expressions such as \textit{"the results are good ..."} or \textit{"I feel that ...”}.
 Also avoid imprecise statements such as \textit{"Under certain assumptions, we get the following result ..."} or \textit{“It is generally known that ..."}. 
 Of course, you must document any facts, claims and opinions that you have borrowed from the literature. 
 Nevertheless, when leaning on sources, make sure to give them context, and elaborate on their essence to enable a clearly structured argument.
 
-\section{Be Concise}
+\section{Be Concise}\index{Conciseness}
 Each sentence should convey a single thought clearly and directly. Each paragraph should develop a complete idea \cite{FreiburgThesisGuideline2025}.
 
   \begin{itemize}
@@ -521,7 +679,7 @@ Each sentence should convey a single thought clearly and directly. Each paragrap
   \end{itemize}
 
 
-\section{Be Consistent}
+\section{Be Consistent}\index{Consistency}
 Consistency is key throughout everything in your thesis. You decided for a specific word choice, a specific notation, a specific nomenclature - stick to it.
 
 \newthought{Especially} when you decided on a specific terminology. Avoid synonyms to achieve creative variation, such as drug, medication, etc. in favour
@@ -534,206 +692,7 @@ of semantic consistency for the reader.
 
 
 
-% ----------------------------------------------------------------------
-\chapter{Marks \& Annotations}
-
-\marginnote{\newthought{Three strikes.} When the same mark appears three times, it is a clear sign that you have a recurring issue 
-in your writing, so I usually stop after the third occurrence and leave it to you.}
-\newthought{What the red pen really meant.}
-For starters I usually do not use a red pen. But, every annotation on your draft is a message from a reader who engaged 
-carefully with your work, feedback means someone spent time with your thoughts really.
-The shorthand below follows conventions common across supervisors and examiners, so who am I to reinvent the wheel.
-
-
-
-\begin{table}[!ht]
-  \centering
-  \caption{Language \& Grammar annotation abbreviations.}
-  \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llp{0.45\linewidth}}
-    \toprule
-    \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
-    \midrule
-    gr             & Grammar                 & Grammatical error: wrong tense, verb form, or agreement \\
-    sp             & Spelling                & Word is misspelled \\
-    p / punct   & Punctuation             & Wrong or missing punctuation mark \\
-    wo             & Word Order              & Words appear in the wrong sequence within a sentence \\
-    sv             & Subject--Verb Agreement & Subject and verb do not agree in number \\
-    \bottomrule
-  \end{tabular*}
-\end{table}
-
-
-\begin{table}[!ht]
-  \centering
-  \caption{Style \& Clarity annotation abbreviations.}
-  \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llp{0.45\linewidth}}
-    \toprule
-    \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
-    \midrule
-    awk          & Awkward     & Phrasing is unnatural or hard to parse \\
-    vg / vague & Vague       & Statement too imprecise to be meaningful \\
-    wc            & Word Choice & Wrong or imprecise word used \\
-    rep          & Repetition  & Same word or idea repeated unnecessarily \\
-    clich\'e  & Clich\'e    & Overused expression; avoid in academic writing \\
-    \bottomrule
-  \end{tabular*}
-\end{table}
-
-
-\begin{table}[!ht]
-  \centering
-  \caption{Scientific Rigor annotation abbreviations.}
-  \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llp{0.45\linewidth}}
-    \toprule
-    \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
-    \midrule
-    cite     & Missing Citation & Claim made without a source \\
-    ev         & Evidence         & Statement lacks supporting evidence \\
-    quant   & Quantify         & Assertion needs a number or measure \\
-    def       & Define           & Term used without definition on first use \\
-    assume & Assumption       & Assumption made but not stated explicitly \\
-    \bottomrule
-  \end{tabular*}
-\end{table}
-
-
-\begin{table}[!ht]
-  \centering
-  \caption{Structure \& Flow annotation abbreviations.}
-  \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llp{0.45\linewidth}}
-    \toprule
-    \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
-    \midrule
-    org           & Organization      & Logical order of ideas is unclear \\
-    tr             & Transition        & Missing or weak transition between ideas \\
-    \P & New Paragraph     & A paragraph break is needed here \\
-    fwd           & Forward Reference & References material not yet introduced \\
-    non-seq   & Non Sequitur      & Statement does not follow from what precedes \\
-    \bottomrule
-  \end{tabular*}
-\end{table}
-
-
-\begin{table}[!ht]
-  \centering
-  \caption{References \& Citations annotation abbreviations.}
-  \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llp{0.45\linewidth}}
-    \toprule
-    \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
-    \midrule
-    fmt   & Format                 & Citation not in the required style  \\
-    miss & Missing Reference      & Contents lacks a proper reference \\
-    inc   & Incomplete             & Not all relevant citations are included \\
-    self & Excessive Self-Citation & Over-reliance on own prior work \\
-    sec   & Secondary Source       & Citing a citation instead of the original \\
-    \bottomrule
-  \end{tabular*}
-\end{table}
-
-
-\begin{table}[!ht]
-  \centering
-  \caption{Figures \& Tables annotation abbreviations.}
-  \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llp{0.45\linewidth}}
-    \toprule
-    \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
-    \midrule
-    cap   & Caption        & Missing, incomplete, or non-descriptive caption \\
-    ref   & Not Referenced & Figure or table not mentioned in the main text \\
-    src   & Source Missing & Origin of figure or table not attributed \\
-    res   & Low Resolution & Image quality too low for print \\
-    junk & Chartjunk      & Decorative elements reduce clarity\\
-    \bottomrule
-  \end{tabular*}
-\end{table}
-
-
-\begin{table}[!ht]
-  \centering
-  \caption{Length \& Scope annotation abbreviations.}
-  \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llp{0.45\linewidth}}
-    \toprule
-    \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
-    \midrule
-    verb   & Verbose      & Could be expressed in fewer words \\
-    pad     & Padding      & Filler content that adds no meaning \\
-    oos     & Out of Scope & Content irrelevant to the research question \\
-    short & Too Short    & Section underdeveloped; needs more content \\
-    cut     & Cut          & Entire passage should be removed \\
-    \bottomrule
-  \end{tabular*}
-\end{table}
-
-
-\begin{table}[!ht]
-  \centering
-  \caption{Technical Notation \& Equations annotation abbreviations.}
-  \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llp{0.45\linewidth}}
-    \toprule
-    \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
-    \midrule
-    unit & Missing Unit   & Numerical value given without a unit \\
-    not   & Notation       & Inconsistent or undefined notation \\
-    prec & Precision      & Too many or too few significant figures \\
-    eq     & Equation Error & Mathematical error in the equation \\
-    dim   & Dimensionality & Dimensional inconsistency in formula \\
-    \bottomrule
-  \end{tabular*}
-\end{table}
-
-
-\begin{table}[!ht]
-  \centering
-  \caption{Format \& Layout annotation abbreviations.}
-  \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llp{0.45\linewidth}}
-    \toprule
-    \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
-    \midrule
-    wid     & Widow      & Single word or line stranded at top of page \\
-    orp     & Orphan     & Single word or line stranded at bottom of page \\
-    spc     & Spacing    & Inconsistent or incorrect spacing \\
-    align & Alignment  & Text or element not properly aligned \\
-    font   & Font Style & Wrong or inconsistent font usage \\
-    \bottomrule
-  \end{tabular*}
-\end{table}
-
-
-\begin{table}[!ht]
-  \centering
-  \caption{Academic Integrity annotation abbreviations.}
-  \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llp{0.45\linewidth}}
-    \toprule
-    \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
-    \midrule
-    plag     & Plagiarism          & Text taken from source without attribution \\
-    paraph & Improper Paraphrase & Source too closely echoed without quoting \\
-    ai         & Undisclosed AI Use  & AI-generated content not declared \\
-    ghost   & Ghost Citation      & Citation present but source never consulted \\
-    \bottomrule
-  \end{tabular*}
-\end{table}
-
-
-\begin{table}[!ht]
-  \centering
-  \caption{Logic \& Argumentation annotation abbreviations.}
-  \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llp{0.45\linewidth}}
-    \toprule
-    \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
-    \midrule
-    logic   & Logical Error        & Conclusion does not follow from premises \\
-    circ     & Circular Reasoning   & Argument uses its conclusion as a premise \\
-    hasty   & Hasty Generalization & Broad claim drawn from too few cases \\
-    straw   & Straw Man            & Opponent's position misrepresented to attack it \\
-    contra & Self-Contradiction   & Two statements in the text contradict each other \\
-    \bottomrule
-  \end{tabular*}
-\end{table}
-
-
-% ----------------------------------------------------------------------
-\chapter{Concluding}
+\chapter{Concluding}\index{Conclusion}
 \newthought{Writing a scientific thesis is a process} that demands clarity, structure, and diligence. 
 By following established best practices, working smart and maintaining academic integrity 
 you can produce a thesis that is both impactful and accessible. 
@@ -749,4 +708,3 @@ Remember, the journey is iterative—embrace feedback, stay organized, and let y
 \makestandardbackmatter{howtothesis_references}
 
 \end{document}
-1
