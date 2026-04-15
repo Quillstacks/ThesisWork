@@ -143,3 +143,6 @@ venv.bak/
 *_old.*
 notes.txt
 TODO.txt
+
+# Local student submissions (not shared)
+StudentSubmissions/
