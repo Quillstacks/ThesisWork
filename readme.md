@@ -29,63 +29,37 @@ To be done:
 </p> 
 
 <p align="center">
-	<a href="https://pages.schutera.com/HowToThesis/notes.pdf">
+	<a href="https://pages.schutera.com/ThesisRoadmap/notes.pdf">
 		<img src="https://img.shields.io/badge/Open-Thesis%20Roadmap-blue?logo=adobeacrobatreader" alt="View Thesis Roadmap">
 	</a>
 </p> 
 
+<p align="center">
+	<a href="https://pages.schutera.com/1_Artifact/notes.pdf">
+		<img src="https://img.shields.io/badge/Open-Artifact%20One-blue?logo=adobeacrobatreader" alt="View Artifact One">
+	</a>
+	<a href="https://pages.schutera.com/2_Artifact/notes.pdf">
+		<img src="https://img.shields.io/badge/Open-Artifact%20Two-blue?logo=adobeacrobatreader" alt="View Artifact Two">
+	</a>
+	<a href="https://pages.schutera.com/3_Artifact/notes.pdf">
+		<img src="https://img.shields.io/badge/Open-Artifact%20Three-blue?logo=adobeacrobatreader" alt="View Artifact Three">
+	</a>
+</p>
+
 <br>
 <br>
 
-## How to Contribute to Guidelines and Templates via Pull Request (PR)
+## Contributing
 
-To propose fixes, improvements, or new content for the `.tex` files in this repository:
+Fixes, improvements, and new content are welcome via pull request. Every PR
+is built by CI and must pass before it can be merged; only the maintainer
+pushes to `main`.
 
-1. **Clone the Repository**
-	- If you have write access, clone directly:
-	  ```
-	  git clone <repository-url>
-	  cd ThesisWork
-	  ```
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full workflow, local build
+instructions, and style notes. Use the issue templates to report bugs or
+propose ideas.
 
-2. **Create a New Branch**
-	- Always create a new branch for your changes:
-	  ```
-	  git checkout -b your-feature-or-fix-branch
-	  ```
+## License
 
-3. **Edit the `.tex` Files**
-	- Open the relevant `.tex` files (e.g., `HowToThesis/notes.tex`).
-	- Make corrections, add new content, or propose ideas.
-    - Smaller changes are easier to review (you can do multiple).
-
-4. **Commit Your Changes**
-	- Stage and commit your edits:
-	  ```
-	  git add HowToThesis/notes.tex
-	  git commit -m "Describe your changes (e.g., fix typos, add section, propose idea)"
-	  ```
-
-5. **Push Your Branch**
-	- Push your branch to the remote repository:
-	  ```
-	  git push origin your-feature-or-fix-branch
-	  ```
-
-6. **Open a Pull Request (PR)**
-	- Go to the repository on GitHub.
-	- Click "Compare & pull request" for your branch.
-	- Fill in the PR description, explaining what you changed and why.
-	- Submit the PR.
-
-7. **Review and Respond**
-	- Collaborate with maintainers if they request changes or feedback.
-	- Update your branch as needed and push again; the PR will update automatically.
-
-**Best Practices:**
- - Make focused, clear commits.
- - Use descriptive branch and PR names.
- - Reference issues if relevant.
- - For new ideas, add comments in `.tex` files or explain in the PR.
-
-This workflow helps maintainers review and merge your improvements efficiently.
+This repository is licensed under Creative Commons Attribution-NonCommercial
+4.0 International (CC BY-NC 4.0). See [LICENSE](LICENSE).
