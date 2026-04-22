@@ -1,4 +1,4 @@
-name: Build LaTeX
+name: LaTeX syntax check
 
 on:
   pull_request:
@@ -6,7 +6,6 @@ on:
       - '**/*.tex'
       - '**/*.cls'
       - '**/*.sty'
-      - '**/*.bib'
       - 'sharedAssets/**'
       - '.github/workflows/build-latex.yml'
   push:
@@ -15,45 +14,30 @@ on:
       - '**/*.tex'
       - '**/*.cls'
       - '**/*.sty'
-      - '**/*.bib'
       - 'sharedAssets/**'
       - '.github/workflows/build-latex.yml'
 
 jobs:
-  build:
+  syntax:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    strategy:
+      fail-fast: false
+      matrix:
+        doc:
+          - HowToThesis
+          - ThesisTemplate
+          - ThesisRoadmap
+          - 1_Artifact
+          - 2_Artifact
+          - 3_Artifact
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Build all documents
+      - name: Syntax check ${{ matrix.doc }}/notes.tex
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: |
-            HowToThesis/notes.tex
-            ThesisTemplate/notes.tex
-            ThesisRoadmap/notes.tex
-            1_Artifact/notes.tex
-            2_Artifact/notes.tex
-            3_Artifact/notes.tex
-          work_in_root_file_dir: true
-          continue_on_error: false
-
-      - name: Upload built PDFs as artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: thesis-pdfs
-          path: '**/notes.pdf'
-          if-no-files-found: error
-          retention-days: 14
-
-      - name: Commit rebuilt PDFs back to main
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: 'ci: rebuild PDFs [skip ci]'
-          commit_user_name: github-actions[bot]
-          commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
-          file_pattern: '**/notes.pdf'
+          root_file: notes.tex
+          working_directory: ${{ matrix.doc }}
+          compiler: pdflatex
+          args: -draftmode -halt-on-error -interaction=nonstopmode -file-line-error

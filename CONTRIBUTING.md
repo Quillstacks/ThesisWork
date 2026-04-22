@@ -55,8 +55,8 @@ latexmk -c
 2. **Make focused commits** — small, self-contained changes are easier to
    review than sweeping rewrites.
 3. **Build the affected document locally** to confirm it compiles and the
-   change renders as intended. Do *not* commit the regenerated `notes.pdf`;
-   CI rebuilds and commits PDFs on merge to `main`.
+   change renders as intended. Commit the regenerated `notes.pdf` alongside
+   your source changes so the hosted PDFs stay in sync.
 4. **Open a PR** using the provided template. Fill in the affected documents
    and the checklist.
 5. **Review** — the maintainer reviews, may request changes, and merges. Only
@@ -75,14 +75,15 @@ latexmk -c
 
 ## Continuous integration
 
-Every PR triggers a LaTeX build of all six documents. The PR cannot merge
-until the build is green. The compiled PDFs are uploaded as a workflow
-artifact (`thesis-pdfs`) so reviewers can preview the rendered result
-without building locally.
+Every PR runs a LaTeX syntax check on all six documents (`pdflatex
+-draftmode`, no bibtex, no PDF output). The PR cannot merge until the
+check is green. This catches undefined macros, missing packages, and
+brace mismatches without the overhead of a full build.
 
-On merge to `main`, the same workflow rebuilds PDFs and commits them back
-to `main` with `[skip ci]` in the message, keeping the PDFs served from
-`pages.schutera.com` in sync with the sources.
+Regenerating `notes.pdf` is your responsibility: build locally with
+`latexmk -pdf notes.tex` and commit the updated PDF alongside the source
+change. The hosted PDFs on `pages.schutera.com` are served straight from
+`main`.
 
 ## License
 
