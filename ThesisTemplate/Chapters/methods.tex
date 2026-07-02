@@ -17,6 +17,8 @@ Think of this as the blueprint for your methods chapter. My doctoral advisor use
 The different components and their interactions should be clearly outlined. 
 It is nifty to repurpose the visuals of the components in the following sections, adding more detail there, while referencing back to the overview.
 
+\marginnote{\newthought{Interfaces before internals.} Define what goes in and what comes out first, in which format and against which contract. Only then design the system behind those interfaces. Fixed boundaries let the inside change without breaking everything around it.}
+
 % You want to contribute? This is the place you are looking for. 
 % I am still trying to find a good library to draw nice system diagrams in LaTeX, or at least include them nicely.
 % Bonus points using Tufte Style (maybe that package or library still needs to be written, maybe we should do that).
@@ -33,6 +35,8 @@ In any case do not loose touch with the problem statement and make sure to have 
 
 \newthought{After the overview,} proceed to describe each component on a high level in text as well. If you are designing an entire new framework or system. 
 This is also the place to introduce new definitions, notations, or terminology that will be used throughout the rest of the thesis.
+
+\marginnote{\newthought{Motivate every design decision} by exactly one of three: the state of the art, meaning someone has shown it works; your own experiment, meaning you measured it here; or a boundary condition, meaning data, compute, time, or your partner decided it. An unmotivated choice is the first thing an examiner finds.}
 
 
 \bigskip

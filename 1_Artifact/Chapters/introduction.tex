@@ -23,6 +23,8 @@ on the most relevant works. Later in your thesis you will have a full reference 
 
 \vfill
 \section{Objectives}\label{sec:Objectives}
+\marginnote{\newthought{Key performance indicators} are the means to make your methods measurable. For every objective, answer one question first: how will I measure myself? Name the metrics and the targets that count as success, before you build. An objective you can not measure is a hope, not a goal.}
+
 \marginnote{%
 \newthought{Schöpfungshöhe}, a certain level of originality and creativity required in academic work, is closely linked to the nature of your contributions. 
 You will soon find yourself trading off between high-risk-high-impact ideas and more conservative incremental objectives. 
@@ -48,6 +50,13 @@ a data-driven analysis of Y, or an application of Z for a new domain. After read
 bullet points, the reader should be able to clearly understand what you are trying to achieve and what he will be walking away with.
 }
 
+
+\section{Data and Groundtruth}\label{sec:Data}
+\marginnote{\newthought{Groundtruth} is what you grade every result against. If it is wrong, every number you report afterwards is wrong too, so scrutinize it harder than your model.}
+\newthought{Explain your data and groundtruth.} Before any method, make the reader understand what you will learn from and what you will measure against. For your data: where it comes from, how much there is, in which modality, how clean and how representative it is, and where its biases lie. For your groundtruth: how the labels are defined, where they come from, how noisy they are, and who agreed on them. Your work is only ever as trustworthy as your groundtruth is honest.
+
+\marginnote{\newthought{Toward the system.} Fix your interfaces, the inputs and outputs and their formats, before the internals. Then motivate every design decision by the state of the art, your own experiment, or a boundary condition.}
+\newthought{From data to system.} Sketch, at a high level, how you get from this data to a result: the interfaces first, then the system behind them, and how you will justify the design choices you expect to make.
 
 \section{Timeline}
 \newthought{Present a timeline} that outlines the key milestones and deadlines for your research project.
