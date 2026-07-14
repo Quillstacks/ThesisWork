@@ -28,6 +28,7 @@
 \usepackage{tikz}
 \usepackage{pgfplots}
 \usepackage{float}
+\usepackage{longtable}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
 
@@ -553,193 +554,154 @@ For starters I usually do not use a red pen. But, every annotation on your draft
 carefully with your work, feedback means someone spent time with your thoughts really.
 The shorthand below follows conventions common across supervisors and examiners, so who am I to reinvent the wheel.
 
+\section{Substance}
+\newthought{Rethink, not retouch.} The marks in this section outrank every mark that
+follows. A surface mark you answer with the pen. A substance mark you cannot: it sends
+you back to the work, not the text. Expect at most a handful on an entire thesis. If you
+get one, do not edit the paragraph. Reopen the experiment.
 
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
 
-\begin{table}[!ht]
-  \centering
-  \caption{Language \& Grammar annotation abbreviations.}
-  \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llp{0.45\linewidth}}
-    \toprule
-    \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
-    \midrule
-    gr             & Grammar                 & Grammatical error: wrong tense, verb form, or agreement \\
-    sp             & Spelling                & Word is misspelled \\
-    p / punct   & Punctuation             & Wrong or missing punctuation mark \\
-    wo             & Word Order              & Words appear in the wrong sequence within a sentence \\
-    sv             & Subject--Verb Agreement & Subject and verb do not agree in number \\
-    \bottomrule
-  \end{tabular*}
-\end{table}
+\begin{longtable}{@{\extracolsep{\fill}}llp{0.45\linewidth}}
+  \caption{Method \& Evidence: can the reader believe this result?}\\
+  \toprule
+  \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
+  \midrule
+  \endfirsthead
+  \toprule
+  \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
+  \midrule
+  \endhead
+  \bottomrule
+  \endlastfoot
+  base   & No Baseline         & Result reported with nothing to compare against \\
+  leak   & Train-Test Leakage  & Test information leaked into training or selection \\
+  abl    & Ablation Missing    & Contribution of each component never isolated \\
+  fair   & Unfair Comparison   & Baseline weaker or less tuned than the proposed method \\
+  conf   & Confound            & Alternative explanation for the result never ruled out \\
+  mism   & Metric Mismatch     & Metric does not measure the stated objective \\
+  sig    & No Significance     & Reported without variance, seeds, or error bars \\
+  cherry & Cherry-Picked       & Only flattering examples or runs shown \\
+  imbal  & Imbalance Ignored   & Aggregate score hides failure on rare cases \\
+  kpi?   & Target Undefined    & Success threshold never set before building \\
+  prov   & Provenance Unclear  & Origin, size, or modality of the data unstated \\
+  reps   & Not Representative  & Data does not match the deployment domain \\
+  repro  & Reproducibility Gap & Result cannot be rerun from what is written or shared \\
+\end{longtable}
 
+\begin{longtable}{@{\extracolsep{\fill}}llp{0.45\linewidth}}
+  \caption{Creativity \& Originality: is there Sch\"opfungsh\"ohe?}\\
+  \toprule
+  \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
+  \midrule
+  \endfirsthead
+  \toprule
+  \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
+  \midrule
+  \endhead
+  \bottomrule
+  \endlastfoot
+  frame & Reframe          & Problem accepted as given, never reframed \\
+  simpl & Simpler Path     & Simpler solution never tried or acknowledged \\
+  asis  & Off the Shelf    & Standard method dropped in with no adaptation \\
+  safe  & All Workhorse    & No staircase or moonshot among the objectives \\
+  nov   & Novelty Unstated & Contribution over related work never made explicit \\
+\end{longtable}
 
-\begin{table}[!ht]
-  \centering
-  \caption{Style \& Clarity annotation abbreviations.}
-  \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llp{0.45\linewidth}}
-    \toprule
-    \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
-    \midrule
-    awk          & Awkward     & Phrasing is unnatural or hard to parse \\
-    vg / vague & Vague       & Statement too imprecise to be meaningful \\
-    wc            & Word Choice & Wrong or imprecise word used \\
-    rep          & Repetition  & Same word or idea repeated unnecessarily \\
-    clich\'e  & Clich\'e    & Overused expression; avoid in academic writing \\
-    \bottomrule
-  \end{tabular*}
-\end{table}
+\begin{longtable}{@{\extracolsep{\fill}}llp{0.45\linewidth}}
+  \caption{Research Craft \& Reflection: was this done, and owned, like research?}\\
+  \toprule
+  \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
+  \midrule
+  \endfirsthead
+  \toprule
+  \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
+  \midrule
+  \endhead
+  \bottomrule
+  \endlastfoot
+  over   & Overclaim                & Conclusion outruns what the result shows \\
+  caus   & Causal Leap              & Correlation reported as causation \\
+  null   & Buried Null              & Negative or null result hidden instead of reported \\
+  tie    & Untethered Result        & Finding never tied back to the research question \\
+  works  & Undefined Success        & ``Works'' asserted without defining what success means \\
+  rq     & Question Unanswerable    & Question too vague for any result to settle it \\
+  synth  & Listed, Not Synthesized  & Sources given in sequence, never connected \\
+  gap    & Gap Not Demonstrated     & Gap announced without showing the literature leaves it open \\
+  mot    & Unmotivated Decision     & Design choice tied to none of the three admissible reasons \\
+  fc     & No Failure-Case Analysis & Only successes shown, failure modes unexamined \\
+  lim    & Boundaries Unstated      & Scope and threats to validity never stated \\
+  logic  & Logical Error            & Conclusion does not follow from premises \\
+  circ   & Circular Reasoning       & Argument uses its conclusion as a premise \\
+  hasty  & Hasty Generalization     & Broad claim drawn from too few cases \\
+  straw  & Straw Man                & Opponent's position misrepresented to attack it \\
+  contra & Self-Contradiction       & Two statements in the text contradict each other \\
+\end{longtable}
 
+\section{Surface}
 
-\begin{table}[!ht]
-  \centering
-  \caption{Scientific Rigor annotation abbreviations.}
-  \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llp{0.45\linewidth}}
-    \toprule
-    \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
-    \midrule
-    cite     & Missing Citation & Claim made without a source \\
-    ev         & Evidence         & Statement lacks supporting evidence \\
-    quant   & Quantify         & Assertion needs a number or measure \\
-    def       & Define           & Term used without definition on first use \\
-    assume & Assumption       & Assumption made but not stated explicitly \\
-    \bottomrule
-  \end{tabular*}
-\end{table}
+\begin{longtable}{@{\extracolsep{\fill}}llp{0.45\linewidth}}
+  \caption{Structure \& Flow annotation abbreviations.}\\
+  \toprule
+  \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
+  \midrule
+  \endfirsthead
+  \toprule
+  \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
+  \midrule
+  \endhead
+  \bottomrule
+  \endlastfoot
+  org   & Organization      & Logical order of ideas is unclear \\
+  tr    & Transition        & Missing or weak transition between ideas \\
+  fwd   & Forward Reference & References material not yet introduced \\
+  verb  & Verbose           & Could be expressed in fewer words \\
+  pad   & Padding           & Filler content that adds no meaning \\
+  oos   & Out of Scope      & Content irrelevant to the research question \\
+  short & Too Short         & Section underdeveloped; needs more content \\
+  cut   & Cut               & Entire passage should be removed \\
+\end{longtable}
 
-
-\begin{table}[!ht]
-  \centering
-  \caption{Structure \& Flow annotation abbreviations.}
-  \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llp{0.45\linewidth}}
-    \toprule
-    \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
-    \midrule
-    org           & Organization      & Logical order of ideas is unclear \\
-    tr             & Transition        & Missing or weak transition between ideas \\
-    \P & New Paragraph     & A paragraph break is needed here \\
-    fwd           & Forward Reference & References material not yet introduced \\
-    non-seq   & Non Sequitur      & Statement does not follow from what precedes \\
-    \bottomrule
-  \end{tabular*}
-\end{table}
-
-
-\begin{table}[!ht]
-  \centering
-  \caption{References \& Citations annotation abbreviations.}
-  \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llp{0.45\linewidth}}
-    \toprule
-    \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
-    \midrule
-    fmt   & Format                 & Citation not in the required style  \\
-    miss & Missing Reference      & Contents lacks a proper reference \\
-    inc   & Incomplete             & Not all relevant citations are included \\
-    self & Excessive Self-Citation & Over-reliance on own prior work \\
-    sec   & Secondary Source       & Citing a citation instead of the original \\
-    \bottomrule
-  \end{tabular*}
-\end{table}
-
-
-\begin{table}[!ht]
-  \centering
-  \caption{Figures \& Tables annotation abbreviations.}
-  \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llp{0.45\linewidth}}
-    \toprule
-    \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
-    \midrule
-    cap   & Caption        & Missing, incomplete, or non-descriptive caption \\
-    ref   & Not Referenced & Figure or table not mentioned in the main text \\
-    src   & Source Missing & Origin of figure or table not attributed \\
-    res   & Low Resolution & Image quality too low for print \\
-    junk & Chartjunk      & Decorative elements reduce clarity\\
-    \bottomrule
-  \end{tabular*}
-\end{table}
-
-
-\begin{table}[!ht]
-  \centering
-  \caption{Length \& Scope annotation abbreviations.}
-  \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llp{0.45\linewidth}}
-    \toprule
-    \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
-    \midrule
-    verb   & Verbose      & Could be expressed in fewer words \\
-    pad     & Padding      & Filler content that adds no meaning \\
-    oos     & Out of Scope & Content irrelevant to the research question \\
-    short & Too Short    & Section underdeveloped; needs more content \\
-    cut     & Cut          & Entire passage should be removed \\
-    \bottomrule
-  \end{tabular*}
-\end{table}
-
-
-\begin{table}[!ht]
-  \centering
-  \caption{Technical Notation \& Equations annotation abbreviations.}
-  \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llp{0.45\linewidth}}
-    \toprule
-    \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
-    \midrule
-    unit & Missing Unit   & Numerical value given without a unit \\
-    not   & Notation       & Inconsistent or undefined notation \\
-    prec & Precision      & Too many or too few significant figures \\
-    eq     & Equation Error & Mathematical error in the equation \\
-    dim   & Dimensionality & Dimensional inconsistency in formula \\
-    \bottomrule
-  \end{tabular*}
-\end{table}
-
-
-\begin{table}[!ht]
-  \centering
-  \caption{Format \& Layout annotation abbreviations.}
-  \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llp{0.45\linewidth}}
-    \toprule
-    \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
-    \midrule
-    wid     & Widow      & Single word or line stranded at top of page \\
-    orp     & Orphan     & Single word or line stranded at bottom of page \\
-    spc     & Spacing    & Inconsistent or incorrect spacing \\
-    align & Alignment  & Text or element not properly aligned \\
-    font   & Font Style & Wrong or inconsistent font usage \\
-    \bottomrule
-  \end{tabular*}
-\end{table}
-
-
-\begin{table}[!ht]
-  \centering
-  \caption{Academic Integrity annotation abbreviations.}
-  \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llp{0.45\linewidth}}
-    \toprule
-    \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
-    \midrule
-    plag     & Plagiarism          & Text taken from source without attribution \\
-    paraph & Improper Paraphrase & Source too closely echoed without quoting \\
-    ai         & Undisclosed AI Use  & AI-generated content not declared \\
-    ghost   & Ghost Citation      & Citation present but source never consulted \\
-    \bottomrule
-  \end{tabular*}
-\end{table}
-
-
-\begin{table}[!ht]
-  \centering
-  \caption{Logic \& Argumentation annotation abbreviations.}
-  \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llp{0.45\linewidth}}
-    \toprule
-    \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
-    \midrule
-    logic   & Logical Error        & Conclusion does not follow from premises \\
-    circ     & Circular Reasoning   & Argument uses its conclusion as a premise \\
-    hasty   & Hasty Generalization & Broad claim drawn from too few cases \\
-    straw   & Straw Man            & Opponent's position misrepresented to attack it \\
-    contra & Self-Contradiction   & Two statements in the text contradict each other \\
-    \bottomrule
-  \end{tabular*}
-\end{table}
-
+\begin{longtable}{@{\extracolsep{\fill}}llp{0.45\linewidth}}
+  \caption{Format \& Presentation annotation abbreviations.}\\
+  \toprule
+  \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
+  \midrule
+  \endfirsthead
+  \toprule
+  \textbf{Abbr.} & \textbf{Full Term} & \textbf{What went wrong} \\
+  \midrule
+  \endhead
+  \bottomrule
+  \endlastfoot
+  gr          & Grammar             & Grammatical error: wrong tense, verb form, or agreement \\
+  sp          & Spelling            & Word is misspelled \\
+  p / punct   & Punctuation         & Wrong or missing punctuation mark \\
+  awk         & Awkward             & Phrasing is unnatural or hard to parse \\
+  vg / vague  & Vague               & Statement too imprecise to be meaningful \\
+  wc          & Word Choice         & Wrong or imprecise word used \\
+  rep         & Repetition          & Same word or idea repeated unnecessarily \\
+  clich\'e    & Clich\'e            & Overused expression; avoid in academic writing \\
+  def         & Define              & Term used without definition on first use \\
+  cite        & Missing Citation    & Claim made without a source \\
+  ev          & Evidence            & Statement lacks supporting evidence \\
+  quant       & Quantify            & Assertion needs a number or measure \\
+  miss        & Missing Reference   & Contents lacks a proper reference \\
+  not         & Notation            & Inconsistent or undefined notation \\
+  unit        & Missing Unit        & Numerical value given without a unit \\
+  eq          & Equation Error      & Mathematical error in the equation \\
+  cap         & Caption             & Missing, incomplete, or non-descriptive caption \\
+  ref         & Not Referenced      & Figure or table not mentioned in the main text \\
+  junk        & Chartjunk           & Decorative elements reduce clarity \\
+  wid         & Widow               & Single word or line stranded at top of page \\
+  spc         & Spacing             & Inconsistent or incorrect spacing \\
+  align       & Alignment           & Text or element not properly aligned \\
+  font        & Font Style          & Wrong or inconsistent font usage \\
+  plag        & Plagiarism          & Text taken from source without attribution \\
+  paraph      & Improper Paraphrase & Source too closely echoed without quoting \\
+  ghost       & Ghost Citation      & Citation present but source never consulted \\
+\end{longtable}
 
 % ----------------------------------------------------------------------
 \chapter{Concluding}
@@ -755,7 +717,9 @@ Remember, the journey is iterative—embrace feedback, stay organized, and let y
 
 
 
-% \makestandardbackmatter{howtothesis_references}
+\setlength{\bibsep}{0pt}% Remove spacing between entries
+\bibliography{howtothesis_references}
+\bibliographystyle{abbrvnat}
 
 \end{document}
 1
