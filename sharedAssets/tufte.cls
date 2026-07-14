@@ -48,18 +48,12 @@
 %%
 
 % Standard back matter structure
-% Processes bibliography for citation resolution but only displays index
+% Renders the bibliography (References) followed by the index
 \newcommand{\makestandardbackmatter}[1]{%
   \backmatter
-  % Process bibliography for citation resolution but don't display it
-  \begingroup
-  \renewcommand{\chapter}[1]{}% Hide bibliography chapter title
-  \renewcommand{\section}[1]{}% Hide bibliography section title  
   \setlength{\bibsep}{0pt}% Remove spacing between entries
-  \renewenvironment{thebibliography}[1]{\setbox0=\vbox\bgroup}{\egroup}% Hide bibliography content
-  \bibliography{#1}
   \bibliographystyle{abbrvnat}
-  \endgroup
+  \bibliography{#1}
   \printindex
 }
 
